@@ -42,7 +42,7 @@ $red:   #d4653e;
         color: $black;
         font-family: BaronNeue, sans-serif;
         text-transform: lowercase;
-        font-size: .8em;
+        font-size: 1em;
         letter-spacing: 5px;
         border-color: $black;
         border-width: 2px;
@@ -62,6 +62,7 @@ $red:   #d4653e;
 
 body {
     background-color: $white;
+    font-size: 14px;
 }
 
 header {
@@ -138,20 +139,32 @@ header {
     background-color: $white;
     font-family: SerifBeta, serif;
     font-style: italic;
-    padding: 30px 20px;
+    padding: 30px 20px 50px 20px;
 
-    p {
-        margin: 10px 0px;
+    p, address {
+        margin: 15px 0px;
+        letter-spacing: 1.5px;
+        line-height: 1.3em;
     }
 
     strong {
         font-weight: bold;
     }
 
+    a {
+        color: $black;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: $red;
+    }
+
     .opener {
         width: 100%;
         display: block;
-        padding: 20px 0;
+        margin: 20px 0;
     }
 
 }
@@ -168,16 +181,30 @@ footer {
 h1 {
     font-family: BaronNeue, sans-serif;
     font-style: normal;
-    font-weight: bold;
     font-size: 1.5em;
+    letter-spacing: 7.5px;
+    line-height: 1.3em;
     margin-top: 2em;
+    margin-bottom: 0.7em;
 }
 
 h2 {
     font-family: BaronNeue, sans-serif;
     font-style: normal;
-    font-weight: bold;
     font-size: 1.2em;
+    letter-spacing: 7.5px;
+    line-height: 1.3em;
+    margin-top: 2em;
+    margin-bottom: 0.4em;
+}
+
+h3 {
+    font-family: SerifBeta, serif;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-top: 2em;
+    margin-bottom: 0.4em;
 }
 
 .borderG {
