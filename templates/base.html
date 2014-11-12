@@ -14,6 +14,7 @@
             {% end %}
         </ul>
         <div id="housebox"></div>
+        <div id="catbox_hoverbox"></div>
         <div id="catbox"></div>
         <audio id="catsound">
 	        <source src="/static/audio/cat.mp3"></source>
@@ -40,7 +41,7 @@
         <script src="/static/js/jquery-1.11.1.min.js"></script>
         <script type="text/javascript">
             var audio = $("#catsound")[0];
-            $("#catbox").mouseenter(function() {
+            $("#catbox_hoverbox").mouseenter(function() {
                 audio.play();
             });
         </script>

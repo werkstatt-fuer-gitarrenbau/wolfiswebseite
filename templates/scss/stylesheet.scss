@@ -95,9 +95,19 @@ header {
         background-image: url(/static/images/cat_small.png);
         width: 117px;
         height: 144px;
+        z-index: 9;
     }
 
-    #catbox:hover {
+    #catbox_hoverbox {
+        position: absolute;
+        top: 166px;
+        left: 156px;
+        width: 22px;
+        height: 34px;
+        z-index: 10;
+    }
+
+    #catbox_hoverbox:hover + #catbox {
         background-image: url(/static/images/cat_meow_small.png);
     }
 }
