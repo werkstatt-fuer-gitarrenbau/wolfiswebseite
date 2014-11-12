@@ -132,6 +132,32 @@ header {
     }
 }
 
+.startcontent {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(/static/pictures/startbackground.jpg) no-repeat;
+    background-size: 100%;
+    background-position: center center;
+
+    .startlink {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 234px;
+        height: 300px;
+        margin-top: -150px;
+        margin-left: -117px;
+        background: url(/static/images/startlink.png) no-repeat;
+    }
+
+    .startlink:hover {
+        background: url(/static/images/startlink_active.png) no-repeat;
+    }
+}
+
 .content {
     margin: auto;
     max-width: 800px;

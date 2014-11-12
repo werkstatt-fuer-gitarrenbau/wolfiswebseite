@@ -13,6 +13,16 @@ nav = [('Gitarren', '/gitarren.html'),
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self, page="base.html"):
+        if page == "home.html":
+            page = "base.html"
+        self.set_header('Content-Type', 'text/html; charset=utf-8')
+        self.set_header('Cache-Control', 'must-revalidate; max-age=0')
+        self.render(page,
+                css_dir="",
+                navitems=nav)
+
+class StartHandler(tornado.web.RequestHandler):
+    def get(self, page="start.html"):
         self.set_header('Content-Type', 'text/html; charset=utf-8')
         self.set_header('Cache-Control', 'must-revalidate; max-age=0')
         self.render(page,
@@ -33,7 +43,7 @@ class StylesheetHandler(tornado.web.RequestHandler):
 class Application(tornado.web.Application):
     def __init__(self):
         handlers = [
-                (r"/", MainHandler),
+                (r"/", StartHandler),
                 (r"/(.+\.html)", MainHandler),
                 (r"/stylesheet.css", StylesheetHandler),
             ]
