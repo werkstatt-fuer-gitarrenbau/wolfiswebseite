@@ -42,8 +42,9 @@
         <script type="text/javascript">
             var audio = $("#catsound")[0];
             $("#catbox_hoverbox").mouseenter(function() {
+                audio.volume = .3;
                 audio.play();
-            });
+                });
         </script>
     </body>
 </html>
