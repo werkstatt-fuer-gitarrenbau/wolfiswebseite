@@ -1,0 +1,165 @@
+$black: #01020e;
+$white: #f1ecdb;
+$green: #abbc94;
+$red:   #d4653e;
+
+@font-face {
+    font-family: BaronNeue;
+    src: url('/static/fonts/baron/Baron Neue.otf');
+}
+@font-face {
+    font-family: BaronNeue;
+    src: url('/static/fonts/baron/Baron Neue Bold.otf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: BaronNeue;
+    src: url('/static/fonts/baron/Baron Neue Italic.otf');
+    font-style: italic;
+}
+@font-face {
+    font-family: BaronNeue;
+    src: url('/static/fonts/baron/Baron Neue Bold Italic.otf');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: SerifBeta;
+    src: url('/static/fonts/SerifBeta_OTF/Serif6Beta-Italic.otf');
+    font-style: italic;
+}
+@font-face {
+    font-family: SerifBeta;
+    src: url('/static/fonts/SerifBeta_OTF/Serif6Beta-BoldItalic.otf');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@mixin box-item-links {
+    li {
+        display: inline-block;
+        color: $black;
+        font-family: BaronNeue, sans-serif;
+        text-transform: uppercase;
+        font-size: .8em;
+        letter-spacing: .2em;
+        border-color: $black;
+        border-width: 2px;
+        border-style: solid;
+        padding: 3px 5px;
+        margin: 2px;
+        a {
+            color: $black;
+            text-decoration: none;
+        }
+    }
+}
+
+header {
+    margin: 0 auto;
+    height: 70px;
+    background-color: $green;
+    background-image: url(/static/images/trees_small.png), url(/static/images/mountains_small.png);
+    background-position: left 10px bottom, right bottom;
+    background-repeat: no-repeat;
+    border-color: $black;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    padding: 100px 250px 30px 200px;
+    @include box-item-links;
+
+    .titleimage {
+        position: absolute;
+        top: 20px;
+        left: 50px;
+    }
+
+    #housebox {
+        position: absolute;
+        top: 114px;
+        left: 50px;
+        background-image: url(/static/images/house_small.png);
+        width: 85px;
+        height: 86px;
+    }
+
+    #housebox:hover {
+        background-image: url(/static/images/house_red_small.png);
+    }
+
+    #catbox {
+        position: absolute;
+        top: 56px;
+        left: 120px;
+        background-image: url(/static/images/cat_small.png);
+        width: 117px;
+        height: 144px;
+    }
+
+    #catbox:hover {
+        background-image: url(/static/images/cat_meow_small.png);
+    }
+}
+
+.content {
+    margin: auto;
+    color: $black;
+    background-color: $white;
+    font-family: SerifBeta, serif;
+    font-style: italic;
+    padding: 30px 20px;
+
+    p {
+        margin: 10px 0px;
+    }
+
+    strong {
+        font-weight: bold;
+    }
+
+    video {
+        margin: 0 auto;
+        width: 640px;
+        height: 360px;
+        display: block;
+    }
+}
+
+footer {
+    margin: 0 auto;
+    padding: 10px;
+    color: $black;
+    background-color: $red;
+    text-align: center;
+    @include box-item-links;
+}
+
+h1 {
+    font-family: BaronNeue, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-top: 2em;
+}
+
+h2 {
+    font-family: BaronNeue, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.borderG {
+    border-style: solid;
+    border-width: 8px;
+    border-color: $green;
+    margin: 0 auto;
+    display: block;
+}
+
+.plain {
+    border-color: $green;
+    margin: 0 auto;
+    display: block;
+}

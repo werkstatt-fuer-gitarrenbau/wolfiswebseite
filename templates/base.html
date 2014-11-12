@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <link rel="stylesheet" href="{{ css_dir }}/stylesheet.css" type="text/css">
+        <title>Werkstatt für Gitarrenbau</title>
+    </head>
+    <body>
+        <header>
+        <a href="/"><img class="titleimage" src="/static/images/WFG_LOGO_WEN.png" alt="Werkstatt für Gitarrenbau"></a>
+        <ul>
+            {% for name, link in navitems %}
+            <li><a href="{{ link }}" >{{ name }}</a></li>
+            {% end %}
+        </ul>
+        <div id="housebox"></div>
+        <div id="catbox"></div>
+        <audio id="catsound">
+	        <source src="/static/audio/cat.mp3"></source>
+            <source src="/static/audio/cat.ogg"></source>
+        </audio>
+        </header>
+        <div class="content">
+            {% block content %}
+            <video controls preload="auto" poster="/static/videos/wfg_imagefilm_640x360_poster.jpg">
+                <source src="/static/videos/wfg_imagefilm_640x360.webm" type='video/webm;codecs="vp8, vorbis"' />
+                <source src="/static/videos/wfg_imagefilm_640x360.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
+                <source src="/static/videos/wfg_imagefilm_640x360.ogv" type='video/ogg;codecs="theora, vorbis"' />
+            </video>
+            <h1>Herzlich Willkommen in der Werkstatt für Gitarrenbau!</h1>
+            <p>
+            Hier findet Ihr Informationen zu meinen Instrumenten, sowie meinem umfangreichen Reparaturangebot. Über den Blog halte ich Euch immer über meine aktuellen Projekte auf dem Laufenden.</p>
+            {% end %}
+        </div>
+        <footer>
+            <ul>
+                <li><a href="/impressum.html">Impressum</a></li>
+            </ul>
+        </footer>
+        <script src="/static/js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript">
+            var audio = $("#catsound")[0];
+            $("#catbox").mouseenter(function() {
+                audio.play();
+            });
+        </script>
+    </body>
+</html>
