@@ -1,6 +1,32 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div id="map" class="opener"></div>
 <h1>Kontakt</h1>
+
+<address>
+Wolfgang Dinter<br />
+Kirchbergerstraße 4<br />
+87677 Linden<br />
+<br />
+Telefon: 08345 / 952 89 83<br />
+E-Mail: <a href="mailto:info@werkstatt-fuer-gitarrenbau.de">info@werkstatt-fuer-gitarrenbau.de</a>
+</address>
+<p class="bigmargin"><a href="https://www.google.de/maps/dir//''/@47.9022914,10.6303327,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x0:0x7efc40f8933d000a!2m2!1d10.70415!2d47.9022">&gt;&gt;&gt; Route planen</a></p>
+
+{% end %}
+
+{% block extra_scripts %}
+<script src="/static/js/leaflet-0.7.3/leaflet.js"></script>
+<script type="text/javascript">
+    var home = [47.9022, 10.70415];
+    var map = L.map('map').setView(home, 13);
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+                maxZoom: 18
+                }).addTo(map);
+    var marker = L.marker(home).addTo(map);
+    marker.bindPopup("<address>Wolfgang Dinter<br />Kirchbergerstraße 4<br />87677 Linden</address><p><a href=\"https://www.google.de/maps/dir//''/@47.9022914,10.6303327,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x0:0x7efc40f8933d000a!2m2!1d10.70415!2d47.9022\">&gt;&gt;&gt; Route planen</a></p>");
+</script>
 {% end %}
 
