@@ -60,6 +60,10 @@ $red:   #d4653e;
     }
 }
 
+body {
+    background-color: $white;
+}
+
 header {
     margin: 0 auto;
     height: 60px;
@@ -122,6 +126,7 @@ header {
 
 .content {
     margin: auto;
+    max-width: 800px;
     color: $black;
     background-color: $white;
     font-family: SerifBeta, serif;
@@ -136,23 +141,11 @@ header {
         font-weight: bold;
     }
 
-    video {
-        margin: 0 auto;
+    .opener {
         width: 100%;
-        max-width: 800px;
         display: block;
+        padding: 20px 0;
     }
-
-    video:fullscreen {
-        max-width: none;
-    }
-    video:-webkit-full-screen {
-        max-width: none;
-    }
-    video:-moz-full-screen {
-        max-width: none;
-    }
-
 
 }
 
