@@ -11,6 +11,8 @@ nav = [('Gitarren', '/gitarren.html'),
        ('Über Mich', '/uebermich.html'),
        ('Kontakt', '/kontakt.html')]
 
+nav = nav[1:]
+
 class MainHandler(tornado.web.RequestHandler):
     def get(self, page="base.html"):
         if page == "home.html":
