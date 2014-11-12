@@ -138,10 +138,22 @@ header {
 
     video {
         margin: 0 auto;
-        width: 640px;
-        height: 360px;
+        width: 100%;
+        max-width: 800px;
         display: block;
     }
+
+    video:fullscreen {
+        max-width: none;
+    }
+    video:-webkit-full-screen {
+        max-width: none;
+    }
+    video:-moz-full-screen {
+        max-width: none;
+    }
+
+
 }
 
 footer {
