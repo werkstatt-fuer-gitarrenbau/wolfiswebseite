@@ -60,6 +60,31 @@ $red:   #d4653e;
     }
 }
 
+@mixin box-item-links2 {
+    li {
+        display: inline-block;
+        color: $red;
+        font-family: BaronNeue, sans-serif;
+        text-transform: lowercase;
+        font-size: 1em;
+        letter-spacing: 5px;
+        border-color: $red;
+        border-width: 2px;
+        border-style: solid;
+        padding: 5px 6px 3px 10px;
+        margin: 6px;
+        a {
+            color: $red;
+            text-decoration: none;
+        }
+    }
+
+    li:hover {
+        color: $black;
+        background-color: $green;
+    }
+}
+
 @mixin expand-a {
     a {
         width: 100%;
@@ -164,6 +189,10 @@ header {
     ul {
         text-align: center;
     }
+}
+
+.nav2 {
+    @include box-item-links2;
 }
 
 .startcontent {

@@ -6,20 +6,29 @@ import scss
 
 scss.config.PROJECT_ROOT = os.path.join(os.path.dirname(__file__), "templates", "scss")
 
-nav = [('Gitarren', '/gitarren.html'),
+NAV = [('Gitarren', '/gitarren.html'),
        ('Werkstatt', '/werkstatt.html'),
        ('Über Mich', '/uebermich.html'),
        ('Kontakt', '/kontakt.html')]
 
-class MainHandler(tornado.web.RequestHandler):
+GITARREN_NAV = [('Neubau', 'neubau.html'),
+                ('Gebrauchtes', 'gebrauchtes.html'),
+                ('Reparaturen', 'reparaturen.html'),
+                ('Restauration', 'restauration.html'),]
+class BaseHandler(tornado.web.RequestHandler):
+    def render(self, *args, **kwargs):
+        self.set_header('Content-Type', 'text/html; charset=utf-8')
+        self.set_header('Cache-Control', 'must-revalidate; max-age=0')
+        kwargs['css_dir'] = ""
+        kwargs['navitems'] = NAV
+        kwargs['gitarren_nav'] = GITARREN_NAV
+        super(BaseHandler, self).render(*args, **kwargs)
+
+class MainHandler(BaseHandler):
     def get(self, page="base.html"):
         if page == "home.html":
             page = "base.html"
-        self.set_header('Content-Type', 'text/html; charset=utf-8')
-        self.set_header('Cache-Control', 'must-revalidate; max-age=0')
-        self.render(page,
-                css_dir="",
-                navitems=nav)
+        self.render(page)
 
 class StartHandler(tornado.web.RequestHandler):
     def get(self, page="start.html"):
@@ -27,7 +36,7 @@ class StartHandler(tornado.web.RequestHandler):
         self.set_header('Cache-Control', 'must-revalidate; max-age=0')
         self.render(page,
                 css_dir="",
-                navitems=nav)
+                navitems=NAV)
 
 class StylesheetHandler(tornado.web.RequestHandler):
     compiler = scss.Scss(scss_opts={
@@ -44,7 +53,8 @@ class Application(tornado.web.Application):
     def __init__(self):
         handlers = [
                 (r"/", StartHandler),
-                (r"/(.+\.html)", MainHandler),
+                (r"/([^/\\]+\.html)", MainHandler),
+                (r"/(gitarren/[^/\\]+\.html)", MainHandler),
                 (r"/stylesheet.css", StylesheetHandler),
             ]
         settings = dict(

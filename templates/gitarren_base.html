@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<ul class="nav2">
+{% for navitem in gitarren_nav %}
+<li><a href="/gitarren/{{ navitem[1] }}">{{ navitem[0] }}</a></li>
+{% end %}
+</ul>
+
+{% block gitarren_content %}
+
+{% end %}
+
+{% end %}
