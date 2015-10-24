@@ -1,0 +1,45 @@
+{% extends "gitarren_base.html" %}
+
+{% block gitarren_content %}
+<div class="guitarprops">
+<h1>{{ guitar['name'] }}</h1>
+
+{% if True %}
+<table>
+    {% for key, name in guitar_properties %}
+    {% if key in guitar['properties'] %}
+    <tr><th colspan="2">{{ name }}</th></td>
+    {% for prop, value in guitar['properties'].get(key, []) %}
+    <tr><td>{{ prop }}:</td><td>{{ value }}</td>
+    {% end %}
+    {% end %}
+    {% end %}
+</table>
+{% else %}
+    {% for key, name in guitar_properties %}
+    {% if key in guitar['properties'] %}
+    <h2>{{ name }}</h2>
+    <ul>
+    {% for prop, value in guitar['properties'].get(key, []) %}
+    <li><b>{{ prop }}:</b> {{ value }}</li>
+    {% end %}
+    </ul>
+    {% end %}
+    {% end %}
+
+{% end %}
+</div>
+<div class="imagefloater">
+{% for image in guitar['images'][:1] %}
+<img class="first" src="{{ image }}.300.jpg">
+{% end %}
+{% for image in guitar['images'][1:] %}
+<img src="{{ image }}.100.jpg">
+{% end %}
+</div>
+<div class="description">
+    {{ guitar['text'] }}
+</div>
+<div class="floatclear"></div>
+{% end %}
+

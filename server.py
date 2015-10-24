@@ -16,37 +16,55 @@ NAV = [('Gitarren', '/gitarren.html'),
        ('Kontakt', '/kontakt.html')]
 
 GITARREN_NAV = [('Neubau', 'neubau.html'),
-                ('Gebrauchtes', 'gebrauchtes.html'),
+                ('Gebrauchtes', 'gebraucht.html'),
                 ('Reparaturen', 'reparaturen.html'),
                 ('Restauration', 'restauration.html'),]
 
+GITARREN_EIGENSCHAFTEN = [('wood', 'Holz'),
+                          ('other', ''),
+                          ('system', 'System'),
+                          ('lacquer', 'Lack'),
+                          ('condition', 'Zustand'),
+                          ('price', 'Preis')]
+
 def load_guitar_info(folder):
     with open(os.path.join(folder, 'gitarren.yaml'),
-              'r') as guitar_list_file:
-        guitar_list = yaml.load(guitar_list_file)
-    def load_single_guitar_info(guitar):
-        guitars_folder = os.path.join(folder, 'gitarren')
+              'r') as guitars_file:
+        guitars = yaml.load(guitars_file)
+    def load_single_guitar_info(kind, guitar):
+        guitars_folder = os.path.join(folder, kind)
         guitar_folder = os.path.join(guitars_folder, guitar)
         try:
             with open(os.path.join(guitar_folder,
                                    '%s.yaml' % guitar)) as guitar_info:
                 res = yaml.load(guitar_info)
+                if not 'text' in res:
+                    res['text'] = ""
         except IOError:
-            res = {'name': guitar}
+            res = {'name': guitar,
+                   'properties': {},
+                   'text': ""}
         res['folder'] = guitar
         prefix_len = len(guitars_folder + os.path.sep)
         images = sorted(glob.glob(os.path.join(guitar_folder, '*.jpg')))
-        res['images'] = [path[prefix_len:] for path in images]
-        res['images_small'] = [name.replace('.jpg', '.300.jpg')
-                               for name in res['images']]
+        res['images'] = [path[prefix_len:-4] for path in images]
+        moodimages = [path for path in res['images'] if 'front' in path]
+        if len(moodimages) > 0:
+            res['moodimage'] = moodimages[0]
+            res['images'] = [path
+                             for path in res['images']
+                             if path != moodimages[0]]
+        else:
+            res['moodimage'] = res['images'][0]
         return res
-    return map(load_single_guitar_info, guitar_list)
+    return {kind: [load_single_guitar_info(kind, guitar) for guitar in guitar_list]
+            for kind, guitar_list in guitars.items()}
 
 class BaseHandler(tornado.web.RequestHandler):
     def initialize(self):
         self.guitar_info = \
             load_guitar_info(os.path.join(self.settings["data_path"],
-                                          'gitarren_neubau'))
+                                          'gitarren'))
 
     def render(self, *args, **kwargs):
         self.set_header('Content-Type', 'text/html; charset=utf-8')
@@ -54,7 +72,6 @@ class BaseHandler(tornado.web.RequestHandler):
         kwargs['css_dir'] = ""
         kwargs['navitems'] = NAV
         kwargs['gitarren_nav'] = GITARREN_NAV
-        kwargs['guitar_info'] = self.guitar_info
         super(BaseHandler, self).render(*args, **kwargs)
 
 class MainHandler(BaseHandler):
@@ -63,15 +80,23 @@ class MainHandler(BaseHandler):
             page = "base.html"
         self.render(page)
 
-class GitarrenNeubauHandler(BaseHandler):
-    def get(self, guitar):
-        guitar_by_folder = {g['folder']:g for g in self.guitar_info}
-        guitar = guitar_by_folder[guitar]
-        self.render("gitarren_neubau.html",
-                guitar=guitar)
+class GitarrenIndexHandler(BaseHandler):
+    def get(self, kind):
+        self.render("gitarren/%s.html" % kind,
+                    guitar_kind=kind,
+                    guitar_info=self.guitar_info.get(kind, []))
 
-class GitarrenNeubauImageHandler(tornado.web.RequestHandler):
-    def get(self, image, size=None):
+
+class GitarrenHandler(BaseHandler):
+    def get(self, kind, guitar):
+        guitar_by_folder = {g['folder']:g for g in self.guitar_info[kind]}
+        guitar = guitar_by_folder[guitar]
+        self.render("gitarren_detail.html",
+                    guitar=guitar,
+                    guitar_properties=GITARREN_EIGENSCHAFTEN)
+
+class GitarrenImageHandler(tornado.web.RequestHandler):
+    def get(self, kind, image, size=None):
         if size is None:
             def resize(fil):
                 return fil
@@ -86,8 +111,8 @@ class GitarrenNeubauImageHandler(tornado.web.RequestHandler):
                 return sio
         self.set_header('Content-Type', 'image/jpeg; charset=utf-8')
         with open(os.path.join(self.settings['data_path'],
-                               'gitarren_neubau',
                                'gitarren',
+                               kind,
                                '%s.jpg' % image)) as img_file:
             self.write(resize(img_file).read())
 
@@ -114,8 +139,9 @@ class Application(tornado.web.Application):
     def __init__(self):
         handlers = [
                 (r"/", StartHandler),
-                (r"/gitarren/neubau/(.+)\.html", GitarrenNeubauHandler),
-                (r"/gitarren/neubau/(?P<image>[^\.]+)(?:\.(?P<size>[0-9]+))?\.jpg", GitarrenNeubauImageHandler),
+                (r"/gitarren/(?P<kind>[a-z]+).html", GitarrenIndexHandler),
+                (r"/gitarren/(?P<kind>[a-z]+)/(?P<guitar>.+)\.html", GitarrenHandler),
+                (r"/gitarren/(?P<kind>[a-z]+)/(?P<image>[^\.]+)(?:\.(?P<size>[0-9]+))?\.jpg", GitarrenImageHandler),
                 (r"/([^/\\]+\.html)", MainHandler),
                 (r"/(gitarren/[^/\\]+\.html)", MainHandler),
                 (r"/stylesheet.css", StylesheetHandler),

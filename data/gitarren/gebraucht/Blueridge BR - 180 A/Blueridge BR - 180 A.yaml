@@ -1,0 +1,23 @@
+﻿name: Blueridge BR - 180 Adirondack
+properties:
+    wood:
+        - [Decke, "Adirondack Fichte, massiv"]
+        - [Korpus, "indischer Palisander, massiv"]
+        - [Form, "Dreadnought"]
+        - [Hals, "Mahagoni"]
+        - [Griffbrett, "Ebenholz, 20 Bünde"]
+        - [Griffbretteinlagen, "Perlmutt"]
+        - ["Steg & Stegstecker", "Ebenholz"]
+        - [Randeinfassungen, "Perlmutt, Kunststoff"]
+        - ["Sattel & Stegeinlage", "Bein"]
+    other:
+        - [Halsstab, "Zwei-Wege"]
+        - [Halsansatz, "14. Bund"]
+        - [Mechaniken, "Vintage gold, offen"]
+    lacquer:
+        - [Hals, "hochglanz"]
+        - [Korpus, "hochglanz"]
+    condition:
+        - [Zustand, "neuwertig, kaum gespielt!"]
+    price:
+        - [Preis, "1590,-"]

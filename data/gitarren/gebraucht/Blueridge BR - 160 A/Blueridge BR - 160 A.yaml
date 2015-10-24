@@ -1,0 +1,23 @@
+﻿name: Blueridge BR - 160 Adirondack
+properties:
+    wood:
+        - [Decke, "Adirondack Fichte, massiv"]
+        - [Korpus, "indischer Palisander, massiv"]
+        - [Form, "Dreadnought"]
+        - [Hals, "Mahagoni"]
+        - [Griffbrett, "Palisander, 20 Bünde"]
+        - [Griffbretteinlagen, "Perlmutt"]
+        - ["Steg", "Palisander"]
+        - [Randeinfassungen, "Kunststoff"]
+        - ["Sattel & Stegeinlage", "Bein"]
+    other:
+        - [Halsstab, "Zwei-Wege"]
+        - [Halsansatz, "14. Bund"]
+        - [Mechaniken, "Vintage, offen"]
+    lacquer:
+        - [Hals, "hochglanz"]
+        - [Korpus, "hochglanz"]
+    condition:
+        - [Zustand, "Spielspuren!"]
+    price:
+        - [Preis, "750,-"]

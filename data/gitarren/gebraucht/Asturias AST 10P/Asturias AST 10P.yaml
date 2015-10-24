@@ -1,0 +1,24 @@
+﻿name: Asturias AST 10P
+properties:
+    wood:
+        - [Decke, "Zeder, massiv"]
+        - [Korpus, "Palisander"]
+        - [Form, "Asturias Klassik Cutaway"]
+        - [Hals, "Cedro mit Ebenholzspan"]
+        - [Griffbrett, "Ebenholz, 19 Bünde"]
+        - [Griffbretteinlagen, "Perlmutt auf Griffbrettkante"]
+        - ["Steg", "Palisander"]
+        - [Randeinfassungen, "Palisander"]
+        - ["Sattel & Stegeinlage", "Bein"]
+    other:
+        - [Halsansatz, "12. Bund"]
+        - [Mechaniken, "Gotoh"]
+    system:
+        - [Tonabnehmer, "NEU! K&K Trinity Pro Classic inkl. externem Vorverstärker"]
+    lacquer:
+        - [Hals, "hochglanz"]
+        - [Korpus, "hochglanz"]
+    condition:
+        - [Zustand, "Spielspuren"]
+    price:
+        - [Preis, "1200,-"]

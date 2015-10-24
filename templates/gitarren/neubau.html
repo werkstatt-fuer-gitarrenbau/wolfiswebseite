@@ -1,6 +1,6 @@
-{% extends "../gitarren_base.html" %}
+{% extends "with_guitars.html" %}
 
-{% block gitarren_content %}
+{% block description %}
 <h2>Neubau</h2>
 
 <p>
@@ -10,14 +10,5 @@ Neben der eigenen Modelreihe, die sich stetig weiter entwickelt, steht der indiv
 <p>
 Nahezu jeder Musiker hat seine persönlichen Vorstellungen vom perfekten Instrument, daher biete ich jedem die Möglichkeit, bei der Gestaltung der Gitarre aktiv mitwirken zu können. Von der Auswahl der Hölzer, Korpusform, Mensur, Lackierung, Halsbreite & Profil bis hin zur Umsetzung der Klangvorstellungen ist eine Mitbestimmung stets möglich.
 </p>
-
-<p>
-<ul>
-    {% for guitar in guitar_info %}
-    <li><a href="/gitarren/neubau/{{ guitar['folder'] }}.html">{{ guitar['name'] }}</a></li>
-    {% end %}
-</ul>
-</p>
-
 {% end %}
 
