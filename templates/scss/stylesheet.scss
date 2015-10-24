@@ -70,9 +70,19 @@ $red:   #d4653e;
     }
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
 body {
     background-color: $white;
     font-size: 14px;
+}
+
+#base_container {
+    min-height: 100%;
+    position: relative;
 }
 
 header {
@@ -190,6 +200,7 @@ header {
     font-family: SerifBeta, serif;
     font-style: italic;
     padding: 30px 20px 50px 20px;
+    padding-bottom: 100px;
 
     p, address {
         margin: 15px 0px;
@@ -236,6 +247,9 @@ header {
 }
 
 footer {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
     margin: 0 auto;
     padding: 10px;
     color: $black;
