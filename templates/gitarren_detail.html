@@ -1,5 +1,17 @@
 {% extends "gitarren_base.html" %}
 
+{% block extra_scripts %}
+<script type="text/javascript" src="/static/js/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+<link rel="stylesheet" href="/static/js/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="/static/js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+                $(".fancybox").fancybox();
+                    });
+</script>
+{% end %}
+
 {% block gitarren_content %}
 <div class="guitarprops">
 <h1>{{ guitar['name'] }}</h1>
@@ -31,10 +43,14 @@
 </div>
 <div class="imagefloater">
 {% for image in guitar['images'][:1] %}
-<img class="first" src="{{ image }}.300.jpg">
+<a class="fancybox" rel="guitars" href="{{ image }}.800.jpg">
+    <img class="first" src="{{ image }}.300.jpg">
+</a>
 {% end %}
 {% for image in guitar['images'][1:] %}
-<img src="{{ image }}.100.jpg">
+<a class="fancybox" rel="guitars" href="{{ image }}.800.jpg">
+    <img src="{{ image }}.100.jpg">
+</a>
 {% end %}
 </div>
 <div class="description">
