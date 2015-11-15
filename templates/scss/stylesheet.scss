@@ -142,7 +142,7 @@ header {
             background-image: url(/static/images/house_small.png);
             width: 85px;
             height: 86px;
-            @include expand-a; 
+            @include expand-a;
         }
 
         #housebox:hover {
@@ -196,6 +196,22 @@ header {
 
 .nav2 {
     @include box-item-links2;
+    text-align: center;
+    li {
+      margin-top: 0;
+    }
+}
+
+.nav2.images li {
+  padding: 5px;
+}
+
+.nav2_image {
+  height: 290px;
+  width: 172px;
+  color: $white;
+  text-align: center;
+  padding-top: 10px;
 }
 
 .startcontent {
@@ -261,7 +277,8 @@ header {
     .opener {
         width: 100%;
         display: block;
-        margin: 20px 0;
+        margin: 0;
+        margin-bottom: 20px;
     }
 
 }
@@ -276,6 +293,14 @@ header {
     h2 {
         margin-top: 0;
     }
+    p {
+        margin: 0;
+    }
+}
+
+.werkstatt_bilder {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .guitarlist {
@@ -305,17 +330,23 @@ header {
     float: left;
     width: 50%;
     line-height: 1.4em;
+    h1 {
+      margin-bottom: 1.4em;
+    }
     b {
         font-weight: bold;
+    }
+    td, th {
+        padding: 1px;
     }
     th {
         text-align: left;
         font-weight: bold;
         font-size: 1.2em;
         height: 0.5em;
-    }
-    td, th {
-        padding: 1px;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        width: 200px;
     }
     td {
         padding-right: 20px;
@@ -332,9 +363,18 @@ header {
     }
 }
 
+.guitar_detail_image {
+  margin-top: 140px;
+  .secondary_images {
+    margin-top: 20px;
+    text-align: right;
+  }
+}
+
 .description {
     clear: both;
-    padding-top: 10px;
+    padding-top: 30px;
+    line-height: 1.3em;
 }
 
 .floatclear {

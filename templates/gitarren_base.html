@@ -2,9 +2,23 @@
 
 {% block content %}
 
+{% if gitarren_nav_img %}
+<ul class="nav2 images">
+{% else %}
 <ul class="nav2">
+{% end %}
 {% for navitem in gitarren_nav %}
+{% if gitarren_nav_img %}
+<li>
+  <a href="/gitarren/{{ navitem[1] }}">
+    <div class="nav2_image" style="background-image: url(/static/images/nav/{{ navitem[2] }}.jpg)">
+       {{ navitem[0] }}
+    </div>
+  </a>
+</li>
+{% else %}
 <li><a href="/gitarren/{{ navitem[1] }}">{{ navitem[0] }}</a></li>
+{% end %}
 {% end %}
 </ul>
 

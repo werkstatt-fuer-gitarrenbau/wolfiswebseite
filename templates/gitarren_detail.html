@@ -20,11 +20,14 @@
 <table>
     {% for key, name in guitar_properties %}
     {% if key in guitar['properties'] %}
-    <tr><th colspan="2">{{ name }}</th></td>
+    <tr><th colspan="2">{{ name }}</th>
     {% for prop, value in guitar['properties'].get(key, []) %}
     <tr><td>{{ prop }}:</td><td>{{ value }}</td>
     {% end %}
     {% end %}
+    {% end %}
+    {% if 'price' in guitar %}
+    <tr><th>Preis</th><td>{{ guitar['price'] }}</td>
     {% end %}
 </table>
 {% else %}
@@ -41,21 +44,25 @@
 
 {% end %}
 </div>
-<div class="imagefloater">
-{% for image in guitar['images'][:1] %}
+<div class="imagefloater guitar_detail_image">
+{% for image, size, _ in guitar['images'][:1] %}
 <a class="fancybox" rel="guitars" href="{{ image }}.800.jpg">
     <img class="first" src="{{ image }}.300.jpg">
 </a>
 {% end %}
-{% for image in guitar['images'][1:] %}
+<div class="secondary_images">
+{% for image, size, aspect_change in guitar['images'][1:] %}
 <a class="fancybox" rel="guitars" href="{{ image }}.800.jpg">
     <img src="{{ image }}.100.jpg">
 </a>
+{% if aspect_change %}
+<br>
 {% end %}
+{% end %}
+</div>
 </div>
 <div class="description">
     {% raw format_text(guitar['text']) %}
 </div>
 <div class="floatclear"></div>
 {% end %}
-

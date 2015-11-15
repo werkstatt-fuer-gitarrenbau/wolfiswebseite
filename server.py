@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
+import sys
 import tornado.ioloop
 import tornado.web
 import scss
@@ -15,11 +16,9 @@ NAV = [('Gitarren', '/gitarren.html'),
        ('Werkstatt', '/werkstatt.html'),
        ('Über Mich', '/uebermich.html'),
        ('Kontakt', '/kontakt.html')]
-
-GITARREN_NAV = [('Neubau', 'neubau.html'),
-                ('Gebrauchtes', 'gebraucht.html'),
-                ('Reparaturen', 'reparaturen.html'),
-                ('Restauration', 'restauration.html'),]
+GITARREN_NAV = [('Neubau', 'neubau.html', 'neubau'),
+                ('Gebrauchtes', 'gebraucht.html', 'gebraucht'),
+                ('Reparaturen', 'reparaturen.html', 'reparatur')]
 
 GITARREN_EIGENSCHAFTEN = [('wood', 'Holz'),
                           ('wood_and_other', 'Hölzer & Ausstattung'),
@@ -28,6 +27,9 @@ GITARREN_EIGENSCHAFTEN = [('wood', 'Holz'),
                           ('lacquer', 'Lack'),
                           ('condition', 'Zustand'),
                           ('price', 'Preis')]
+
+def aspect((x, y)):
+    return 'portrait' if x < y else 'landscape'
 
 def format_text(text):
     return markdown2.markdown(text)
@@ -52,24 +54,41 @@ def load_guitar_info(folder):
         res['folder'] = guitar
         prefix_len = len(guitars_folder + os.path.sep)
         images = sorted(glob.glob(os.path.join(guitar_folder, '*.jpg')))
-        res['images'] = [path[prefix_len:-4] for path in images]
-        moodimages = [path for path in res['images'] if 'front' in path]
+        image_sizes = []
+        for image in images:
+            with open(image) as fil:
+                image_sizes.append(Image.open(fil).size)
+        res['images'] = [(path[prefix_len:-4], size)
+                         for path, size
+                         in zip(images, image_sizes)]
+        moodimages = [path for path, _ in res['images'] if 'front' in path]
         if len(moodimages) > 0:
             res['moodimage'] = moodimages[0]
-            res['images'] = [path
-                             for path in res['images']
-                             if path != moodimages[0]]
+            res['images'] = [info
+                             for info in res['images']
+                             if info[0] != moodimages[0]]
         else:
-            res['moodimage'] = res['images'][0]
+            res['moodimage'] = res['images'][0][0]
+        res['images'] = [(path, size, aspect(size) != aspect(size2))
+                         for (path, size), (_, size2)
+                         in zip(res['images'],
+                                res['images'][1:] + res['images'][-1:])]
         return res
     return {kind: [load_single_guitar_info(kind, guitar) for guitar in guitar_list]
             for kind, guitar_list in guitars.items()}
+
+def load_image_names(folder):
+    images = sorted(glob.glob(os.path.join(folder, '*.jpg')))
+    print images
+    return [os.path.split(image)[1][:-4] for image in images]
 
 class BaseHandler(tornado.web.RequestHandler):
     def initialize(self):
         self.guitar_info = \
             load_guitar_info(os.path.join(self.settings["data_path"],
                                           'gitarren'))
+        self.werkstatt_bilder = \
+            load_image_names(os.path.join('assets', 'werkstatt'))
 
     def render(self, *args, **kwargs):
         self.set_header('Content-Type', 'text/html; charset=utf-8')
@@ -77,14 +96,17 @@ class BaseHandler(tornado.web.RequestHandler):
         kwargs['css_dir'] = ""
         kwargs['navitems'] = NAV
         kwargs['gitarren_nav'] = GITARREN_NAV
+        if not 'gitarren_nav_img' in kwargs:
+            kwargs['gitarren_nav_img'] = False
         kwargs['format_text'] = format_text
+        kwargs['werkstatt_bilder'] = self.werkstatt_bilder
         super(BaseHandler, self).render(*args, **kwargs)
 
 class MainHandler(BaseHandler):
     def get(self, page="base.html"):
         if page == "home.html":
             page = "base.html"
-        self.render(page)
+        self.render(page, gitarren_nav_img=True)
 
 class GitarrenIndexHandler(BaseHandler):
     def get(self, kind):
@@ -101,8 +123,9 @@ class GitarrenHandler(BaseHandler):
                     guitar=guitar,
                     guitar_properties=GITARREN_EIGENSCHAFTEN)
 
-class GitarrenImageHandler(tornado.web.RequestHandler):
-    def get(self, kind, image, size=None):
+
+class ImageHandler(tornado.web.RequestHandler):
+    def deliver(self, filename, size):
         if size is None:
             def resize(fil):
                 return fil
@@ -115,12 +138,22 @@ class GitarrenImageHandler(tornado.web.RequestHandler):
                 img.save(sio, "JPEG")
                 sio.seek(0)
                 return sio
-        self.set_header('Content-Type', 'image/jpeg; charset=utf-8')
-        with open(os.path.join(self.settings['data_path'],
-                               'gitarren',
-                               kind,
-                               '%s.jpg' % image)) as img_file:
+        self.set_header('Content-Type', 'image/jpeg')
+        with open(filename) as img_file:
             self.write(resize(img_file).read())
+
+
+class GitarrenImageHandler(ImageHandler):
+    def get(self, kind, image, size=None):
+        self.deliver(os.path.join(self.settings['data_path'],
+                                  'gitarren',
+                                  kind,
+                                  '%s.jpg' % image),
+                     size)
+
+class AssetImageHandler(ImageHandler):
+    def get(self, path, size=None):
+        self.deliver(os.path.join('assets', path) + '.jpg', size)
 
 class StartHandler(tornado.web.RequestHandler):
     def get(self, page="start.html"):
@@ -148,6 +181,7 @@ class Application(tornado.web.Application):
                 (r"/gitarren/(?P<kind>[a-z]+).html", GitarrenIndexHandler),
                 (r"/gitarren/(?P<kind>[a-z]+)/(?P<guitar>.+)\.html", GitarrenHandler),
                 (r"/gitarren/(?P<kind>[a-z]+)/(?P<image>[^\.]+)(?:\.(?P<size>[0-9]+))?\.jpg", GitarrenImageHandler),
+                (r"/images/(?P<path>[^\.]+)(?:\.(?P<size>[0-9]+))?\.jpg", AssetImageHandler),
                 (r"/([^/\\]+\.html)", MainHandler),
                 (r"/(gitarren/[^/\\]+\.html)", MainHandler),
                 (r"/stylesheet.css", StylesheetHandler),
@@ -165,4 +199,3 @@ if __name__ == "__main__":
     application.listen(8888)
     print "started server on http://localhost:8888"
     tornado.ioloop.IOLoop.instance().start()
-

@@ -1,10 +1,25 @@
 {% extends "base.html" %}
 
+{% block extra_scripts %}
+<script type="text/javascript" src="/static/js/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+<link rel="stylesheet" href="/static/js/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="/static/js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+                $(".fancybox").fancybox();
+                    });
+</script>
+{% end %}
+
 {% block content %}
-<img style="width: 100%;" src="/static/pictures/01_Werstattpics.png" alt="Bilder aus der Werkstatt">
-<img style="width: 100%;" src="/static/pictures/02_Werstattpics.png" alt="Bilder aus der Werkstatt">
-<img style="width: 100%;" src="/static/pictures/03_Werstattpics.png" alt="Bilder aus der Werkstatt">
-<img style="width: 100%;" src="/static/pictures/04_Werstattpics.png" alt="Bilder aus der Werkstatt">
+<div class="werkstatt_bilder">
+{% for image in werkstatt_bilder %}
+<a class="fancybox" rel="guitars" href="/images/werkstatt/{{ image }}.800.jpg">
+  <img style="width: 200px" src="/images/werkstatt/{{ image }}.200.jpg">
+</a>
+{% end %}
+</div>
 <p>
 In liebevoller Renovierungsarbeit ist im letzten Jahr die Werkstatt für Gitarrenbau in Linden bei Kaufbeuren in einem über 180 Jahre alten Bauernhaus entstanden.
 </p>
