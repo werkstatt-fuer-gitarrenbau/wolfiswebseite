@@ -1,0 +1,11 @@
+BASEDIR=`dirname $0`
+cd $BASEDIR/..
+if [ -e "htdocs" ]; then
+rm -R htdocs
+fi
+make
+python server.py &
+SERVER_PID=$!
+sleep 3 # wait for server to come up
+./mirror_page.sh
+kill $SERVER_PID
