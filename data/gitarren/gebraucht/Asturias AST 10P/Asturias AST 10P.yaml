@@ -1,6 +1,6 @@
 ﻿name: Asturias AST 10P
 properties:
-    wood:
+    wood_and_other:
         - [Decke, "Zeder, massiv"]
         - [Korpus, "Palisander"]
         - [Form, "Asturias Klassik Cutaway"]
@@ -10,7 +10,6 @@ properties:
         - ["Steg", "Palisander"]
         - [Randeinfassungen, "Palisander"]
         - ["Sattel & Stegeinlage", "Bein"]
-    other:
         - [Halsansatz, "12. Bund"]
         - [Mechaniken, "Gotoh"]
     system:
@@ -19,6 +18,5 @@ properties:
         - [Hals, "hochglanz"]
         - [Korpus, "hochglanz"]
     condition:
-        - [Zustand, "Spielspuren"]
-    price:
-        - [Preis, "1200,-"]
+        - [Zustand, "Spielspuren!"]
+price: 1200,-

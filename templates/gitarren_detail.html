@@ -54,7 +54,7 @@
 {% end %}
 </div>
 <div class="description">
-    {{ guitar['text'] }}
+    {% raw format_text(guitar['text']) %}
 </div>
 <div class="floatclear"></div>
 {% end %}

@@ -7,6 +7,7 @@ import yaml
 import glob
 import StringIO
 from PIL import Image
+import markdown2
 
 scss.config.PROJECT_ROOT = os.path.join(os.path.dirname(__file__), "templates", "scss")
 
@@ -21,11 +22,15 @@ GITARREN_NAV = [('Neubau', 'neubau.html'),
                 ('Restauration', 'restauration.html'),]
 
 GITARREN_EIGENSCHAFTEN = [('wood', 'Holz'),
+                          ('wood_and_other', 'Hölzer & Ausstattung'),
                           ('other', ''),
                           ('system', 'System'),
                           ('lacquer', 'Lack'),
                           ('condition', 'Zustand'),
                           ('price', 'Preis')]
+
+def format_text(text):
+    return markdown2.markdown(text)
 
 def load_guitar_info(folder):
     with open(os.path.join(folder, 'gitarren.yaml'),
@@ -72,6 +77,7 @@ class BaseHandler(tornado.web.RequestHandler):
         kwargs['css_dir'] = ""
         kwargs['navitems'] = NAV
         kwargs['gitarren_nav'] = GITARREN_NAV
+        kwargs['format_text'] = format_text
         super(BaseHandler, self).render(*args, **kwargs)
 
 class MainHandler(BaseHandler):
