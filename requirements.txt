@@ -2,3 +2,4 @@ pyyaml
 sh
 tornado
 pyScss
+Pillow
