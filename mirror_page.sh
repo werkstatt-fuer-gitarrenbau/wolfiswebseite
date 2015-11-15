@@ -5,5 +5,5 @@ if [ -d "$OUTDIR" ]; then
 rm -R $OUTDIR
 fi
 mkdir -p $OUTDIR
-wget -m -p -k -nH -P "$OUTDIR" http://localhost:8888
+wget -q -m -p -k -nH -P "$OUTDIR" http://localhost:8888
 cp -R "$DIR/static" "$OUTDIR/"
