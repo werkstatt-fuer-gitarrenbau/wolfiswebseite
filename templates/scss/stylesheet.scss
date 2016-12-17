@@ -298,11 +298,17 @@ header {
         margin-bottom: 20px;
     }
 
+    .small_opener {
+        width: 70%;
+        display: block;
+        margin: 40px auto;
+    }
+
 }
 
 .infobox {
     background-color: $green;
-    padding: 10px;
+    padding: 18px;
     border-color: $red;
     border-style: solid;
     border-width: 2px;
@@ -312,6 +318,9 @@ header {
     }
     p {
         margin: 0;
+    }
+    p ~ p {
+        margin-top: 1em;
     }
 }
 
@@ -427,7 +436,7 @@ h2 {
     letter-spacing: 7.5px;
     line-height: 1.3em;
     margin-top: 2em;
-    margin-bottom: 0.4em;
+    margin-bottom: 2em;
 }
 
 h3 {

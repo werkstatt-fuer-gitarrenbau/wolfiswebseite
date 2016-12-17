@@ -1,0 +1,29 @@
+﻿name: Orchestra Model FP Cut
+properties:
+    wood_and_other:
+        - [Decke, "Fichte, massiv"]
+        - [Korpus, "Palisander, massiv"]
+        - [Form, "Orchestra Model"]
+        - [Hals, "Cedro"]
+        - [Griffbrett, "Ebenholz, 22 Bünde"]
+        - [Griffbretteinlagen, "Dots, Perlmutt"]
+        - [Steg, "Palisander"]
+        - [Stegstecker, "Palisander mit Perlmuttauge"]
+        - [Randeinfassungen, "Palisander"]
+        - ["Sattel & Stegeinlage", "Bein"]
+        - [Halsstab, "Zwei-Wege"]
+        - [Halsansatz, "14. Bund"]
+        - [Mechaniken, "Gotoh 510 Serie 1:15 offen"]
+    lacquer:
+        - ["Korpus & Hals", "offenporig Matt"]
+        - [Decke, "Hochglanz"]
+price: 3550,-
+
+text: "Das Orchestra Model ist eine etwas kleinere Gitarre, die sich durch eine angenehme Bespielbarkeit auszeichnet.
+        Durch eine ausgeprägte Deckenwölbung, die in Kombination mit einer leichten Bauweise steht, lässt sich ein dynamischer
+        Ton mit einer beachtlichen Lautstärke erzeugen.
+
+
+        Mit Hilfe von Kohlefaserstäben im Inneren des Halses kann eine hervorragende Stimmstabilität ermöglicht werden.
+        Die offenporig matte Lackierung von  Hals und Korpus betont die natürliche Haptik der Hölzer.
+        Das Orchestra Model ist in einem optisch schlichten Gewand gekleidet, mit aller klanglichen Vielfalt eines handgefertigten Instruments."
