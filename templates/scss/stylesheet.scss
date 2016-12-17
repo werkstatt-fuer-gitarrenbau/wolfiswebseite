@@ -298,6 +298,19 @@ header {
         font-weight: bold;
         text-decoration: none;
     }
+    
+    sup {
+        vertical-align: super;
+    }
+    
+    sub {
+        vertical-align: sub;
+    }
+
+    sup, sub {
+        font-size: smaller;
+        margin-left: .1em;
+    }
 
     a:hover {
         color: $red;
