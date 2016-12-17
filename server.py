@@ -32,13 +32,13 @@ GITARREN_EIGENSCHAFTEN = {
              ('condition', 'Zustand'),
              ('price', 'Preis')],
         "en":
-            [('wood', 'wood'),
-             ('wood_and_other', 'wood & fittings'),
+            [('wood', 'Wood'),
+             ('wood_and_other', 'Woods & Materials'),
              ('other', ''),
-             ('system', 'system'),
-             ('lacquer', 'lacquer'),
-             ('condition', 'condition'),
-             ('price', 'price')],
+             ('system', 'System'),
+             ('lacquer', 'Lacquer'),
+             ('condition', 'Condition'),
+             ('price', 'Price')],
         }
 
 def aspect((x, y)):
