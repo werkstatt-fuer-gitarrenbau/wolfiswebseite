@@ -1,4 +1,4 @@
-﻿name: Orchestra Model
+﻿name: Orchestra Model FP
 properties:
     wood_and_other:
         - [Decke, "Fichte, massiv"]
