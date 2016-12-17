@@ -1,29 +1,55 @@
 ﻿name: Orchestra Model FP Cut
-properties:
-    wood_and_other:
-        - [Decke, "Fichte, massiv"]
-        - [Korpus, "Palisander, massiv"]
-        - [Form, "Orchestra Model"]
-        - [Hals, "Cedro"]
-        - [Griffbrett, "Ebenholz, 22 Bünde"]
-        - [Griffbretteinlagen, "Dots, Perlmutt"]
-        - [Steg, "Palisander"]
-        - [Stegstecker, "Palisander mit Perlmuttauge"]
-        - [Randeinfassungen, "Palisander"]
-        - ["Sattel & Stegeinlage", "Bein"]
-        - [Halsstab, "Zwei-Wege"]
-        - [Halsansatz, "14. Bund"]
-        - [Mechaniken, "Gotoh 510 Serie 1:15 offen"]
-    lacquer:
-        - ["Korpus & Hals", "offenporig Matt"]
-        - [Decke, "Hochglanz"]
 price: 3550,-
+de:
+    properties:
+        wood_and_other:
+            - [Decke, "Fichte, massiv"]
+            - [Korpus, "Palisander, massiv"]
+            - [Form, "Orchestra Model"]
+            - [Hals, "Cedro"]
+            - [Griffbrett, "Ebenholz, 22 Bünde"]
+            - [Griffbretteinlagen, "Dots, Perlmutt"]
+            - [Steg, "Palisander"]
+            - [Stegstecker, "Palisander mit Perlmuttauge"]
+            - [Randeinfassungen, "Palisander"]
+            - ["Sattel & Stegeinlage", "Bein"]
+            - [Halsstab, "Zwei-Wege"]
+            - [Halsansatz, "14. Bund"]
+            - [Mechaniken, "Gotoh 510 Serie 1:15 offen"]
+        lacquer:
+            - ["Korpus & Hals", "offenporig Matt"]
+            - [Decke, "Hochglanz"]
 
-text: "Das Orchestra Model ist eine etwas kleinere Gitarre, die sich durch eine angenehme Bespielbarkeit auszeichnet.
-        Durch eine ausgeprägte Deckenwölbung, die in Kombination mit einer leichten Bauweise steht, lässt sich ein dynamischer
-        Ton mit einer beachtlichen Lautstärke erzeugen.
+    text: "Das Orchestra Model ist eine etwas kleinere Gitarre, die sich durch eine angenehme Bespielbarkeit auszeichnet.
+            Durch eine ausgeprägte Deckenwölbung, die in Kombination mit einer leichten Bauweise steht, lässt sich ein dynamischer
+            Ton mit einer beachtlichen Lautstärke erzeugen.
 
 
-        Mit Hilfe von Kohlefaserstäben im Inneren des Halses kann eine hervorragende Stimmstabilität ermöglicht werden.
-        Die offenporig matte Lackierung von  Hals und Korpus betont die natürliche Haptik der Hölzer.
-        Das Orchestra Model ist in einem optisch schlichten Gewand gekleidet, mit aller klanglichen Vielfalt eines handgefertigten Instruments."
+            Mit Hilfe von Kohlefaserstäben im Inneren des Halses kann eine hervorragende Stimmstabilität ermöglicht werden.
+            Die offenporig matte Lackierung von  Hals und Korpus betont die natürliche Haptik der Hölzer.
+            Das Orchestra Model ist in einem optisch schlichten Gewand gekleidet, mit aller klanglichen Vielfalt eines handgefertigten Instruments."
+en:
+     properties:
+         wood_and_other:
+             - [Top, "Spruce"]
+             - [Body, "Indian Rosewood"]
+             - [Form, "Orchestra Model"]
+             - [Neck, "Cedro"]
+             - [Fingerboard, "Ebony, 22 frets"]
+             - [Inlays, "Dots, Mother of Pearl"]
+             - ["Bridge", "Rosewood"]
+             - ["Pins", "Rosewood with MOP Inlays"]
+             - [Bindings, "Ebony"]
+             - ["Saddle", "Bone"]
+             - [Truss rod, "Two-Way"]
+             - [Base of the Neck, "14<sup>th</sup> fret"]
+             - [Machine heads, "Gotoh 510 Series 1:15, Open-gear"]
+         lacquer:
+             - [Neck & Body, "Open-pored Matt"]
+             - [Top, "Glossy"]
+     text:
+         "The Orchestra Model is a slightly smaller guitar famous for its comfortable playability. With its distinctive arched top, combined with a light-weight construction, a dynamic tone with a remarkable volume can be gained.
+
+
+          A carbon fiber reinforced neck guarantees a tuning with high tonal sustainability. The open-pored matt lacquer on neck and body supports the natural feel of the materials.
+          The Orchestral Model shines throughout its simple aesthetics with all the tonal diversity of a hand-crafted instrument."
