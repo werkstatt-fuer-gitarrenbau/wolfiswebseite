@@ -145,6 +145,17 @@ class GitarrenHandler(BaseHandler):
     def get(self, kind, guitar, lang="de"):
         guitar_by_folder = {g['folder']:g for g in self.guitar_info[kind]}
         guitar = guitar_by_folder[guitar]
+        if lang in guitar:
+            lang_props = guitar[lang]
+        elif "de" in guitar:
+            lang_props = guitar["de"]
+        else:
+            lang_props = {}
+        for key in LANGUAGES:
+            if key in guitar:
+                del guitar[key]
+        for key, value in lang_props.items():
+            guitar[key] = value
         self.render("gitarren_detail.html",
                     guitar=guitar,
                     guitar_properties=GITARREN_EIGENSCHAFTEN[lang],
