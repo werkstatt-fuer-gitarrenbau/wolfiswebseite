@@ -1,7 +1,10 @@
 {% extends "with_guitars.html" %}
 
 {% block description %}
+{% if lang == "de" %}
 <h2>Gebrauchtes</h2>
-
+{% elif lang == "en" %}
+<h2>Used</h2>
+{% end %}
 {% end %}
 

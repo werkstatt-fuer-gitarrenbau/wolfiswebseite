@@ -117,8 +117,6 @@ header {
     margin: 0 auto;
     background-color: $green;
 
-    @include box-item-links;
-
     .titleimage {
         position: absolute;
         top: 20px;
@@ -184,12 +182,31 @@ header {
         #fblink:hover {
             background-image: url(/static/images/WFG_FACEBOOKFAHNE_beige.png);
         }
+
+        ul#language_chooser {
+            position: absolute;
+            top: 10px;
+            right: 220px;
+            width: 40px;
+            text-align: center;
+            li {
+                display: block;
+                a {
+                    color: $black;
+                    font-family: BaronNeue, sans-serif;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                }
+            }
+        }
     }
+
     @media (max-width: 819px) {
         padding: 110px 10px 10px 10px;
     }
 
-    ul {
+    ul.navlinks {
+        @include box-item-links;
         text-align: center;
     }
 }

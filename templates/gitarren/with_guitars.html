@@ -8,8 +8,8 @@
 <p>
 <ul class="guitarlist">
     {% for guitar in guitar_info %}
-    <li><a href="/gitarren/{{ guitar_kind }}/{{ guitar['folder'] }}.html">
-            <img src="/gitarren/{{ guitar_kind }}/{{ guitar['moodimage'] }}.350.jpg">
+    <li><a href="{{ guitar_kind }}/{{ guitar['folder'] }}.html">
+            <img src="{{ guitar['moodimage'] }}.350.jpg">
             <span>{{ guitar['name'] }}</span></a></li>
     {% end %}
 </ul>

@@ -1,6 +1,7 @@
 {% extends "../gitarren_base.html" %}
 
 {% block gitarren_content %}
+{% if lang == "de" %}
 <h2>Reparaturen</h2>
 
 <p>
@@ -15,6 +16,13 @@ Zögern Sie nicht mich zu kontaktieren!
 <p>
 <a href="/static/pdf/preisliste_standardreparaturen.pdf" target="_blank">>>> Preisliste der Standardreparaturen</a>
 </p>
+{% elif lang == "en" %}
+<h2>Repair</h2>
+
+<p>
+<a href="/static/pdf/preisliste_standardreparaturen.pdf" target="_blank">>>> standard rates</a>
+</p>
+{% end %}
 
 {% end %}
 

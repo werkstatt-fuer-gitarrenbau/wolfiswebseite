@@ -11,16 +11,21 @@
     <body>
         <div id="base_container">
         <header>
-        <a href="/home.html"><img class="titleimage" src="/static/images/WFG_LOGO_WEN.png" alt="Werkstatt für Gitarrenbau"></a>
-        <ul>
+            <a href="/{{ lang }}/home.html"><img class="titleimage" src="/static/images/WFG_LOGO_WEN.png" alt="Werkstatt für Gitarrenbau"></a>
+        <ul class="navlinks">
             {% for name, link in navitems %}
-            <li><a href="{{ link }}" >{{ name }}</a></li>
+            <li><a href="/{{ lang }}{{ link }}" >{{ name[lang] }}</a></li>
             {% end %}
         </ul>
-        <div id="housebox"><a href="/home.html"></a></div>
+        <div id="housebox"><a href="/{{ lang }}/home.html"></a></div>
         <div id="catbox_hoverbox"></div>
         <div id="catbox"></div>
         <div id="fblink"><a href="https://www.facebook.com/WerkstattfuerGitarrenbau"></a></div>
+        <ul id="language_chooser">
+            {% for lang_tag in languages %}
+            <li><a href="{{ switch_lang(lang_tag) }}">{{ lang_tag }}</a></li>
+            {% end %}
+        </ul>
         <audio id="catsound">
 	        <source src="/static/audio/cat.mp3"></source>
             <source src="/static/audio/cat.ogg"></source>
@@ -45,7 +50,7 @@
         </div>
         <footer>
             <ul>
-                <li><a href="/impressum.html">Impressum</a></li>
+                <li><a href="/{{ lang }}/impressum.html">Impressum</a></li>
             </ul>
         </footer>
         </div>

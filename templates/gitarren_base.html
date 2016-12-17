@@ -10,14 +10,14 @@
 {% for navitem in gitarren_nav %}
 {% if gitarren_nav_img %}
 <li>
-  <a href="/gitarren/{{ navitem[1] }}">
+    <a href="/{{ lang }}/gitarren/{{ navitem[1] }}">
     <div class="nav2_image" style="background-image: url(/static/images/nav/{{ navitem[2] }}.jpg)">
-       {{ navitem[0] }}
+       {{ navitem[0][lang] }}
     </div>
   </a>
 </li>
 {% else %}
-<li><a href="/gitarren/{{ navitem[1] }}">{{ navitem[0] }}</a></li>
+<li><a href="/{{ lang }}/gitarren/{{ navitem[1] }}">{{ navitem[0][lang] }}</a></li>
 {% end %}
 {% end %}
 </ul>
