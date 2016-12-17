@@ -1,21 +1,42 @@
 ﻿name: Blueridge BR - 160 Adirondack
-properties:
-    wood_and_other:
-        - [Decke, "Adirondack Fichte, massiv"]
-        - [Korpus, "indischer Palisander, massiv"]
-        - [Form, "Dreadnought"]
-        - [Hals, "Mahagoni"]
-        - [Griffbrett, "Palisander, 20 Bünde"]
-        - [Griffbretteinlagen, "Perlmutt"]
-        - ["Steg", "Palisander"]
-        - [Randeinfassungen, "Kunststoff"]
-        - ["Sattel & Stegeinlage", "Bein"]
-        - [Halsstab, "Zwei-Wege"]
-        - [Halsansatz, "14. Bund"]
-        - [Mechaniken, "Vintage, offen"]
-    lacquer:
-        - [Hals, "hochglanz"]
-        - [Korpus, "hochglanz"]
-    condition:
-        - [Zustand, "Spielspuren!"]
 price: 750,-
+de:
+    properties:
+        wood_and_other:
+            - [Decke, "Adirondack Fichte, massiv"]
+            - [Korpus, "indischer Palisander, massiv"]
+            - [Form, "Dreadnought"]
+            - [Hals, "Mahagoni"]
+            - [Griffbrett, "Palisander, 20 Bünde"]
+            - [Griffbretteinlagen, "Perlmutt"]
+            - ["Steg", "Palisander"]
+            - [Randeinfassungen, "Kunststoff"]
+            - ["Sattel & Stegeinlage", "Bein"]
+            - [Halsstab, "Zwei-Wege"]
+            - [Halsansatz, "14. Bund"]
+            - [Mechaniken, "Vintage, offen"]
+        lacquer:
+            - [Hals, "hochglanz"]
+            - [Korpus, "hochglanz"]
+        condition:
+            - [Zustand, "Spielspuren!"]
+en:
+    properties:
+        wood_and_other:
+          - [Top, "Adirondack Spruce"]
+          - [Body, "Indian Rosewood"]
+          - [Form, "Dreadnought"]
+          - [Neck, "Mahagoni"]
+          - [Fingerboard, "Rosewood, 20 Frets"]
+          - [Inlays, "Mother of Pearl"]
+          - ["Bridge", "Rosewood"]
+          - [Bindings, "Plastic"]
+          - ["Saddle", "Bone"]
+          - [Truss rod, "Two-Way"]
+          - [Base of the Neck, "14<sup>th</sup> Fret"]
+          - [Machine Heads, "Open Vintage Tuners"]
+        lacquer:
+          - [Neck, "Glossy"]
+          - [Body, "Glossy"]
+        condition:
+          - [Condition, "Used"]

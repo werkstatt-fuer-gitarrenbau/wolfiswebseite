@@ -36,17 +36,17 @@ de:
 en:
      properties:
          wood_and_other:
-             - [Top, "Spruce"]
+             - [Top, "Swiss Spruce"]
              - [Body, "Spanish Cypress"]
              - [Form, "Grand Solo"]
              - [Neck, "Mahagoni"]
-             - [Fingerboard, "Ebony, 22 frets"]
-             - [Inlays, "Mother of pearl"]
+             - [Fingerboard, "Ebony, 22 Frets"]
+             - [Inlays, "Mother of Pearl"]
              - ["Bridge & Pins", "Rosewood"]
              - [Bindings, "Ebony"]
              - ["Saddle", "Bone"]
              - [Truss rod, "Two-Way"]
-             - [Base of the Neck, "14<sup>th</sup> fret"]
+             - [Base of the Neck, "14<sup>th</sup> Fret"]
              - [Machine Heads, "Gotoh 510 Series 1:21, Chrome"]
          lacquer:
              - [Neck, "Deep Matt"]
