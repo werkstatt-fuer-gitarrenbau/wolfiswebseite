@@ -22,12 +22,12 @@
     {% if key in guitar['properties'] %}
     <tr><th colspan="2">{{ name }}</th>
     {% for prop, value in guitar['properties'].get(key, []) %}
-    <tr><td>{{ prop }}:</td><td>{{ value }}</td>
+    <tr><td>{{ prop }}:</td><td>{% raw value %}</td>
     {% end %}
     {% end %}
     {% end %}
     {% if 'price' in guitar %}
-    <tr><th>Preis</th><td>{{ guitar['price'] }}</td>
+    <tr><th>{{ words["price"] }}</th><td>{{ guitar['price'] }}</td>
     {% end %}
 </table>
 {% else %}

@@ -12,7 +12,8 @@ import markdown2
 
 scss.config.PROJECT_ROOT = os.path.join(os.path.dirname(__file__), "templates", "scss")
 
-LANGUAGES = ["de", "en"]
+LANGUAGES = [("de", "Deutsch"),
+             ("en", "English")]
 
 NAV = [({"de": 'Gitarren', "en": "guitars"}, '/gitarren.html'),
        ({"de": 'Werkstatt', "en": "workshop"}, '/werkstatt.html'),
@@ -40,6 +41,18 @@ GITARREN_EIGENSCHAFTEN = {
              ('condition', 'Condition'),
              ('price', 'Price')],
         }
+
+WORDS = {
+        "de":
+            {
+                "price": "Preis",
+            },
+        "en":
+            {
+                "price": "Price",
+            }
+        }
+
 
 def aspect((x, y)):
     return 'portrait' if x < y else 'landscape'
@@ -115,6 +128,7 @@ class BaseHandler(tornado.web.RequestHandler):
         kwargs['werkstatt_bilder'] = self.werkstatt_bilder
         kwargs['languages'] = LANGUAGES
         kwargs['switch_lang'] = self.url_for_lang
+        kwargs['words'] = WORDS[kwargs["lang"]]
         super(BaseHandler, self).render(*args, **kwargs)
 
     def url_for_lang(self, lang):
@@ -151,7 +165,7 @@ class GitarrenHandler(BaseHandler):
             lang_props = guitar["de"]
         else:
             lang_props = {}
-        for key in LANGUAGES:
+        for key, name in LANGUAGES:
             if key in guitar:
                 del guitar[key]
         for key, value in lang_props.items():
