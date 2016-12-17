@@ -12,7 +12,8 @@ import markdown2
 
 scss.config.PROJECT_ROOT = os.path.join(os.path.dirname(__file__), "templates", "scss")
 
-LANGUAGES = ["de", "en"]
+LANGUAGES = [("de", "Deutsch"),
+             ("en", "English")]
 
 NAV = [({"de": 'Gitarren', "en": "guitars"}, '/gitarren.html'),
        ({"de": 'Werkstatt', "en": "workshop"}, '/werkstatt.html'),
@@ -151,7 +152,7 @@ class GitarrenHandler(BaseHandler):
             lang_props = guitar["de"]
         else:
             lang_props = {}
-        for key in LANGUAGES:
+        for key, name in LANGUAGES:
             if key in guitar:
                 del guitar[key]
         for key, value in lang_props.items():

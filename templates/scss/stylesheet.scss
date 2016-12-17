@@ -173,7 +173,7 @@ header {
         #fblink {
             position: absolute;
             top: -20px;
-            right: 260px;
+            right: 280px;
             background-image: url(/static/images/WFG_FACEBOOKFAHNE_black.png);
             width: 31px;
             height: 125px;
@@ -186,15 +186,14 @@ header {
         ul#language_chooser {
             position: absolute;
             top: 10px;
-            right: 220px;
-            width: 40px;
-            text-align: center;
+            right: 200px;
+            width: 60px;
+            text-align: right;
             li {
                 display: block;
                 a {
                     color: $black;
                     font-family: BaronNeue, sans-serif;
-                    text-transform: uppercase;
                     text-decoration: none;
                 }
             }
@@ -203,6 +202,19 @@ header {
 
     @media (max-width: 819px) {
         padding: 110px 10px 10px 10px;
+        ul#language_chooser {
+            display: inline-block;
+            float: right;
+            text-align: right;
+            li {
+                display: inline-block;
+                a {
+                    color: $black;
+                    font-family: BaronNeue, sans-serif;
+                    text-decoration: none;
+                }
+            }
+        }
     }
 
     ul.navlinks {

@@ -22,10 +22,13 @@
         <div id="catbox"></div>
         <div id="fblink"><a href="https://www.facebook.com/WerkstattfuerGitarrenbau"></a></div>
         <ul id="language_chooser">
-            {% for lang_tag in languages %}
-            <li><a href="{{ switch_lang(lang_tag) }}">{{ lang_tag }}</a></li>
+            {% for lang_tag, lang_name in languages %}
+            {% if lang != lang_tag %}
+            <li><a href="{{ switch_lang(lang_tag) }}">{{ lang_name }}</a></li>
+            {% end %}
             {% end %}
         </ul>
+        <div class="floatclear"></div>
         <audio id="catsound">
 	        <source src="/static/audio/cat.mp3"></source>
             <source src="/static/audio/cat.ogg"></source>
