@@ -42,6 +42,18 @@ GITARREN_EIGENSCHAFTEN = {
              ('price', 'price')],
         }
 
+WORDS = {
+        "de":
+            {
+                "price": "Preis",
+            },
+        "en":
+            {
+                "price": "Price",
+            }
+        }
+
+
 def aspect((x, y)):
     return 'portrait' if x < y else 'landscape'
 
@@ -116,6 +128,7 @@ class BaseHandler(tornado.web.RequestHandler):
         kwargs['werkstatt_bilder'] = self.werkstatt_bilder
         kwargs['languages'] = LANGUAGES
         kwargs['switch_lang'] = self.url_for_lang
+        kwargs['words'] = WORDS[kwargs["lang"]]
         super(BaseHandler, self).render(*args, **kwargs)
 
     def url_for_lang(self, lang):
