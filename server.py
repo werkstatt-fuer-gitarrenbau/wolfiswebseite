@@ -46,10 +46,12 @@ WORDS = {
         "de":
             {
                 "price": "Preis",
+                "plan route": "Route planen",
             },
         "en":
             {
                 "price": "Price",
+                "plan route": "plan route",
             }
         }
 

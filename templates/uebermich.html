@@ -2,6 +2,7 @@
 
 {% block content %}
 <img class="small_opener" src="/static/pictures/Portrait_small.jpg" alt="portrait image">
+{% if lang == "de" %}
 <p>
 Geboren 1987 in Landsberg am Lech, aufgewachsen im sonnigen Allgäu habe ich mit 14 Jahren das Gitarrespielen für mich entdeckt und mit meiner ausgeprägten Faszination für den Werkstoff Holz zum Gitarrenbau gefunden.
 </p>
@@ -14,4 +15,18 @@ Nach einem kurzen Aufenthalt in Japan, in dem ich meine Begeisterung für japani
 <p>
 Seit 2013 arbeite ich an und in meiner eigenen Werkstatt, die in meiner Heimat Linden bei Kaufbeuren angesiedelt ist und freue mich immer über interessierten Besuch!
 </p>
+{% elif lang == "en" %}
+<p>
+Born in Landsberg in 1987, raised in sunny Allgäu, I discovered playing the guitar at the age of fourteen and discovered guitar-making because of my distinctive enthusiasm for wood as a material.
+</p>
+<p>
+I began my apprenticeship as a luthier in 2008 in the Gitarrenladen in Weingarten, where Andreas Dill and Franziska Kössl, two master luthiers, taught me the art of making guitars. I graduated in 2011 at the Musical Instrument Making School Mittenwald successfully.
+</p>
+<p>
+After a short visit to Japan, where I had the opportunity to pursue my interests of Japanese culture,
+wood-working tools and guitar making, I continued  working at the Gitarrenladen to gain some more experience in advising customers as well as repairing instruments, until 2013.
+</p><p>
+Since 2013 I have been working back in my homeland in Linden near Kaufbeuren in my own workshop, where I'm always looking forward to welcoming new people who are interested in my work!
+</p>
+{% end %}
 {% end %}
