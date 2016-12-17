@@ -56,8 +56,7 @@ def load_guitar_info(folder):
         images = sorted(glob.glob(os.path.join(guitar_folder, '*.jpg')))
         image_sizes = []
         for image in images:
-            with open(image) as fil:
-                image_sizes.append(Image.open(fil).size)
+            image_sizes.append(Image.open(image).size)
         res['images'] = [(path[prefix_len:-4], size)
                          for path, size
                          in zip(images, image_sizes)]
@@ -127,20 +126,19 @@ class GitarrenHandler(BaseHandler):
 class ImageHandler(tornado.web.RequestHandler):
     def deliver(self, filename, size):
         if size is None:
-            def resize(fil):
-                return fil
+            def resize(filename):
+                return open(filename)
         else:
             size = int(size)
-            def resize(fil):
+            def resize(filename):
                 sio = StringIO.StringIO()
-                img = Image.open(fil)
+                img = Image.open(filename)
                 img.thumbnail((size, size), Image.ANTIALIAS)
                 img.save(sio, "JPEG")
                 sio.seek(0)
                 return sio
         self.set_header('Content-Type', 'image/jpeg')
-        with open(filename) as img_file:
-            self.write(resize(img_file).read())
+        self.write(resize(filename).read())
 
 
 class GitarrenImageHandler(ImageHandler):
