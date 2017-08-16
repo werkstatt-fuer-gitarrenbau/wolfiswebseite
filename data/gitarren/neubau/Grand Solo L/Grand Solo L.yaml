@@ -1,6 +1,6 @@
 ﻿name: Grand Solo L
-price: 3490,-
 de:
+  price: verkauft!
   properties:
       wood_and_other:
           - [Decke, "Zeder, massiv"]
@@ -31,6 +31,7 @@ de:
        Dieses Instrument ist voller Respekt gegenüber der Gitarrenbautradition, mit Blick auf die Zukunft entstanden."
 
 en:
+  price: sold!
   properties:
       wood_and_other:
           - [Top, "Cedar"]
