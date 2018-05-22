@@ -473,6 +473,25 @@ h3 {
     margin-bottom: 0.4em;
 }
 
+ul.ds {
+    padding-left: 1em;
+}
+
+.ds {
+    dt {
+        font-weight: bold;
+        margin-top: 1em;
+        margin-bottom: .2em;
+    }
+    dd {
+        padding-left: 1em;
+    }
+    li {
+        list-style-type: circle;
+        margin-bottom: .3em;
+    }
+}
+
 .borderG {
     border-style: solid;
     border-width: 8px;
