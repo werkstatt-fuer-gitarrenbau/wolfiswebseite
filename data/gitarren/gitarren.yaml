@@ -6,7 +6,7 @@ neubau:
 - OM_FP
 - OM_ZM_CUT
 - OM_FP_CUT
-gebraucht:
+gebraucht: [] # <- Klammer bedeutet leere Liste
 #- Asturias AST 10P
 #- Blueridge BR - 160 A
-- Blueridge BR - 180 A
+#- Blueridge BR - 180 A
