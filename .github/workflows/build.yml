@@ -1,12 +1,16 @@
-steps:
-- uses: actions/checkout@v2
-- uses: actions/setup-python@v2
-  with:
-    python-version: '2.x'
-- uses: BSFishy/pip-action@v1
-  with:
-    requirements: requirements.txt
-- run: |
-    - cd ci
-    - ./generate_static_htdocs
-    - python uploader.py
+name: CI
+on: [push]
+jobs:
+  build:
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '2.x'
+    - uses: BSFishy/pip-action@v1
+      with:
+        requirements: requirements.txt
+    - run: |
+        - cd ci
+        - ./generate_static_htdocs
+        - python uploader.py
