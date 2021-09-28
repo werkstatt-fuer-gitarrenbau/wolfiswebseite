@@ -12,6 +12,6 @@ jobs:
       with:
         requirements: requirements.txt
     - run: |
-        - cd ci
-        - ./generate_static_htdocs
-        - python uploader.py
+        cd ci
+        ./generate_static_htdocs
+        python uploader.py
