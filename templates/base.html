@@ -91,6 +91,11 @@
                 audio.play();
                 });
             </script>
+        <script type="text/javascript">
+          if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
+            location.replace(`https:${location.href.substring(location.protocol.length)}`);
+          }
+        </script>
         {% block extra_scripts %}
 
         {% end %}
