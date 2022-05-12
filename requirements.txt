@@ -2,5 +2,6 @@ pyyaml
 sh
 tornado
 pyScss
+pathlib
 Pillow
 markdown2
