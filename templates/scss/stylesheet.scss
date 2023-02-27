@@ -173,7 +173,7 @@ header {
         #fblink {
             position: absolute;
             top: -20px;
-            right: 280px;
+            right: 320px;
             background-image: url(/static/images/WFG_FACEBOOKFAHNE_black.png);
             width: 31px;
             height: 125px;
@@ -181,6 +181,19 @@ header {
         }
         #fblink:hover {
             background-image: url(/static/images/WFG_FACEBOOKFAHNE_beige.png);
+        }
+
+        #iglink {
+            position: absolute;
+            top: -20px;
+            right: 279px;
+            background-image: url(/static/images/WFG_INSTAGRAMFAHNE_black.png);
+            width: 31px;
+            height: 125px;
+            @include expand-a;
+        }
+        #iglink:hover {
+            background-image: url(/static/images/WFG_INSTAGRAMFAHNE_beige.png);
         }
 
         ul#language_chooser {
