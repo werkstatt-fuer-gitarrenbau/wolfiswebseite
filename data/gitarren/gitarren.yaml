@@ -1,5 +1,8 @@
----
+
 neubau:
+- GS_FE_2022
+- GS_FP_2022
+- OM_ZM_2022
 - Grand Solo L
 - Grand Solo L Cutaway
 - OM_ZM
@@ -7,6 +10,3 @@ neubau:
 - OM_ZM_CUT
 - OM_FP_CUT
 gebraucht: [] # <- Klammer bedeutet leere Liste
-#- Asturias AST 10P
-#- Blueridge BR - 160 A
-#- Blueridge BR - 180 A
