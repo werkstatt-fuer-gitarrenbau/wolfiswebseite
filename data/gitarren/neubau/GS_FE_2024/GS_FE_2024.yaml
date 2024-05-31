@@ -1,0 +1,61 @@
+﻿name: Grand Solo FE 2024
+de:
+  price: verkauft!
+  properties:
+      wood_and_other:
+          - [Decke, "schweizer Alpenfichte, gehaselt"]
+          - [Korpus, "Elsbeere, geflammt"]
+          - [Form, "Grand Solo"]
+          - [Hals, "Mahagoni"]
+          - [Griffbrett, "Palisander, indisch, 21 Bünde"]
+          - [Griffbretteinlagen, "Perlmutt"]
+          - [Steg, "Palisander, indisch"]
+          - [Stegstecker, "Palisander, indisch"]
+          - [Randeinfassungen, "Elsbeere, geflammt"]
+          - ["Sattel & Stegeinlage", "Bein"]
+          - [Halsstab, "Zwei-Wege"]
+          - [Halsansatz, "14. Bund"]
+          - [Mechaniken, "Gotoh SGV510Z Serie 1:21 chrom"]
+          - [Koffer, "Hiscox Pro II GAD"]
+      lacquer:
+          - [Hals, "matt lackiert"]
+          - [Korpus, "Schellack"]
+
+  text: <br />
+       <br />
+       <br />
+       Die Grand Solo Serie zeichnet sich durch einen kräftigen und strahlenden Ton aus, der eine hohe Tragfähigkeit besitzt.
+       Der obertonreiche Klang bietet dem Gitarristen ein breites Spektrum, um den Ton in den gewünschten Charakter formen zu können.
+
+       <p>Mit der Weiterentwicklung traditioneller Beleistungssysteme für Gitarrendecken, kann ein sehr ausgewogener und
+       dynamischer Gitarrenklang erzeugt werden.</p>
+
+       Dieses Instrument ist voller Respekt gegenüber der Gitarrenbautradition, mit Blick auf die Zukunft entstanden.
+
+en:
+  price: sold!
+  properties:
+      wood_and_other:
+          - [Top, "Swiss spruce, bearclaw"]
+          - [Body, "Elsbeere, flamed"]
+          - [Form, "Grand Solo"]
+          - [Neck, "Mahagoni"]
+          - [Fingerboard, "Indian rosewood, 21 frets"]
+          - [Inlays, "Mother of pearl"]
+          - [Bridge, "Indian rosewood"]
+          - [Bridgepins, "Indian rosewood"]
+          - [Bindings, "Elsbeere, flamed"]
+          - ["Saddle", "Bone"]
+          - [Truss rod, "Two-way"]
+          - [Base of the neck, "14<sup>th</sup> fret"]
+          - [Machine heads, "Gotoh SGV510Z series 1:21, chrome"]
+          - [Case, "Hiscox Pro II GAD"]
+      lacquer:
+          - [Neck, "Hard wax oil"]
+          - [Body, "Shellac"]
+  text: <br />
+       <br />
+       <br />
+      The character of the Grand Solo Series is defined through a very strong and clear tone that shines in its lasting presence. The rich and harmonic sound offers a wide range of tonal diversity to the guitarist.
+
+      This instrument’s origins respect the tradition of lutherie, but also look ahead into the future."
