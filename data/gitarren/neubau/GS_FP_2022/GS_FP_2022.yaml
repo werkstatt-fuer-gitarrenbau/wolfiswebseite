@@ -1,6 +1,6 @@
 ﻿name: Grand Solo FP 2022
 de:
-  price: 5800,-
+  price: 5900,-
   properties:
       wood_and_other:
           - [Decke, "schweizer Alpenfichte"]
@@ -18,7 +18,7 @@ de:
           - [Koffer, "Hiscox Pro II GAD"]
       lacquer:
           - [Hals, "Hartwachsöl"]
-          - [Korpus, "Schelllack"]
+          - [Korpus, "Schellack"]
 
   text: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dStb9HYFegM\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>
        <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/DDob6inigJo\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>
@@ -38,21 +38,21 @@ de:
        Dieses Instrument ist voller Respekt gegenüber der Gitarrenbautradition, mit Blick auf die Zukunft entstanden."
 
 en:
-  price: 5800,-
+  price: 5900,-
   properties:
       wood_and_other:
           - [Top, "Swiss Spruce"]
           - [Body, "Indian Rosewood"]
           - [Form, "Grand Solo"]
           - [Neck, "Mahagoni"]
-          - [Fingerboard, "Ebony, 21 Frets"]
+          - [Fingerboard, "Ebony, 21 frets"]
           - [Inlays, "Mother of Pearl"]
           - ["Bridge & Pins", "Indian Rosewood"]
           - [Bindings, "Indian Rosewood"]
           - ["Saddle", "Bone"]
           - [Truss rod, "Two-Way"]
-          - [Base of the Neck, "14<sup>th</sup> Fret"]
-          - [Machine Heads, "Gotoh SGV510Z Series 1:21, Chrome"]
+          - [Base of the Neck, "14<sup>th</sup> fret"]
+          - [Machine Heads, "Gotoh SGV510Z series 1:21, chrome"]
           - [Case, "Hiscox Pro II GAD"]
       lacquer:
           - [Neck, "Hard Wax Oil"]
@@ -63,11 +63,9 @@ en:
        <br />
        <br />
        <br />
-      The character of the Grand Solo Series is defined through a very strong and clear tone that shines in its lasting presence. The rich and harmonic sound offers a wide range of tonal diversity to the guitarist.
+      The character of the Grand Solo series is defined through a very strong and clear tone that shines in its lasting presence. The rich and harmonic sound offers a wide range of tonal diversity to the guitarist.
 
+      <p> A long lasting sustain as well as an excellent tuning stability can be provided due to the use of well-seasoned, high density old mahogany for the guitar necks.
+        With the further advancement of traditional guitar top bracing systems, a well-balanced and highly dynamic guitar sound can be accomplished.</p>
 
-      A long lasting sustain as well as an excellent tuning stability can be provided due to the use of well-seasoned, high density old mahogany for the guitar necks.
-      With the advancement of traditional guitar top bracing systems, a well-balanced and highly dynamic guitar sound can be accomplished.
-
-
-      This instrument’s origins respects the tradition of lutherie, but also looks ahead into the future."
+      This instrument was created with respect for the guitar building tradition and with an eye to the future."

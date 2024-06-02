@@ -7,18 +7,19 @@ de:
           - [Korpus, "Elsbeere, geflammt"]
           - [Form, "Grand Solo"]
           - [Hals, "Mahagoni"]
-          - [Griffbrett, "Palisander, indisch, 21 Bünde"]
+          - [Griffbrett, "indischer Palisander, <br>21 Bünde"]
           - [Griffbretteinlagen, "Perlmutt"]
-          - [Steg, "Palisander, indisch"]
-          - [Stegstecker, "Palisander, indisch"]
+          - [Steg, "indischer Palisander"]
+          - [Stegstecker, "indischer Palisander"]
           - [Randeinfassungen, "Elsbeere, geflammt"]
           - ["Sattel & Stegeinlage", "Bein"]
           - [Halsstab, "Zwei-Wege"]
           - [Halsansatz, "14. Bund"]
           - [Mechaniken, "Gotoh SGV510Z Serie 1:21 chrom"]
+          - [Tonabnehmer, "L.R. Baggs Anthem"]
           - [Koffer, "Hiscox Pro II GAD"]
       lacquer:
-          - [Hals, "matt lackiert"]
+          - [Hals, "Hartwachsöl"]
           - [Korpus, "Schellack"]
 
   text: <br />
@@ -36,26 +37,30 @@ en:
   price: sold!
   properties:
       wood_and_other:
-          - [Top, "Swiss spruce, bearclaw"]
+          - [Top, "Swiss Spruce, bearclaw"]
           - [Body, "Elsbeere, flamed"]
           - [Form, "Grand Solo"]
           - [Neck, "Mahagoni"]
-          - [Fingerboard, "Indian rosewood, 21 frets"]
-          - [Inlays, "Mother of pearl"]
-          - [Bridge, "Indian rosewood"]
-          - [Bridgepins, "Indian rosewood"]
+          - [Fingerboard, "Indian Rosewood, <br>21 frets"]
+          - [Inlays, "Mother of Pearl"]
+          - [Bridge, "Indian Rosewood"]
+          - [Bridgepins, "Indian Rosewood"]
           - [Bindings, "Elsbeere, flamed"]
-          - ["Saddle", "Bone"]
+          - [Saddle, "Bone"]
           - [Truss rod, "Two-way"]
           - [Base of the neck, "14<sup>th</sup> fret"]
-          - [Machine heads, "Gotoh SGV510Z series 1:21, chrome"]
+          - [Machine Heads, "Gotoh SGV510Z series 1:21, chrome"]
+          - [Pick-Up, "L.R. Baggs Anthem"]
           - [Case, "Hiscox Pro II GAD"]
       lacquer:
-          - [Neck, "Hard wax oil"]
+          - [Neck, "Hard Wax Oil"]
           - [Body, "Shellac"]
   text: <br />
        <br />
        <br />
-      The character of the Grand Solo Series is defined through a very strong and clear tone that shines in its lasting presence. The rich and harmonic sound offers a wide range of tonal diversity to the guitarist.
+      The character of the Grand Solo series is defined through a very strong and clear tone that shines in its lasting presence. The rich and harmonic sound offers a wide range of tonal diversity to the guitarist.
 
-      This instrument’s origins respect the tradition of lutherie, but also look ahead into the future."
+      <p> A long lasting sustain as well as an excellent tuning stability can be provided due to the use of well-seasoned, high density old mahogany for the guitar necks.
+        With the further advancement of traditional guitar top bracing systems, a well-balanced and highly dynamic guitar sound can be accomplished.</p>
+
+      This instrument was created with respect for the guitar building tradition and with an eye to the future.

@@ -3,21 +3,21 @@ price: 4350,-
 de:
     properties:
         wood_and_other:
-            - [Decke, "Zeder, massiv"]
-            - [Korpus, "Mahagoni, massiv"]
+            - [Decke, "Zeder"]
+            - [Korpus, "Mahagoni"]
             - [Form, "Orchestra Model"]
             - [Hals, "Cedro"]
             - [Griffbrett, "Ebenholz, 22 Bünde"]
             - [Griffbretteinlagen, "Dots, Perlmutt"]
             - [Steg, "Wenge"]
-            - [Stegstecker, "Ebenholz mit Perlmuttauge"]
+            - [Stegstecker, "Ebenholz mit Perlmuttaugen"]
             - [Randeinfassungen, "Mahagoni"]
             - ["Sattel & Stegeinlage", "Bein"]
             - [Halsstab, "Zwei-Wege"]
             - [Halsansatz, "14. Bund"]
             - [Mechaniken, "Gotoh 510 Serie 1:15 offen"]
         lacquer:
-            - ["Korpus & Hals", "offenporig Matt"]
+            - ["Korpus & Hals", "offenporig matt"]
             - [Decke, "Hochglanz"]
 
     text: "Das Orchestra Model ist eine etwas kleinere Gitarre, die sich durch eine angenehme Bespielbarkeit auszeichnet.
@@ -26,30 +26,30 @@ de:
 
 
             Mit Hilfe von Kohlefaserstäben im Inneren des Halses kann eine hervorragende Stimmstabilität ermöglicht werden.
-            Die offenporig matte Lackierung von  Hals und Korpus betont die natürliche Haptik der Hölzer.
+            Die offenporig matte Lackierung von Hals und Korpus betont die natürliche Haptik der Hölzer.
             Das Orchestra Model ist in einem optisch schlichten Gewand gekleidet, mit aller klanglichen Vielfalt eines handgefertigten Instruments."
 en:
      properties:
          wood_and_other:
              - [Top, "Canadian Cedar"]
-             - [Body, "Mahagoni"]
+             - [Body, "Mahogany"]
              - [Form, "Orchestra Model"]
              - [Neck, "Cedro"]
-             - [Fingerboard, "Ebony, 22 Frets"]
+             - [Fingerboard, "Ebony, 22 frets"]
              - [Inlays, "Dots, Mother of Pearl"]
              - ["Bridge", "Wenge"]
              - ["Pins", "Ebony with MOP Inlays"]
-             - [Bindings, "Mahagoni"]
+             - [Bindings, "Mahogany"]
              - ["Saddle", "Bone"]
              - [Truss rod, "Two-Way"]
-             - [Base of the Neck, "14<sup>th</sup> Fret"]
-             - [Machine heads, "Gotoh 510 Series 1:15, Open-gear"]
+             - [Base of the Neck, "14<sup>th</sup> fret"]
+             - [Machine heads, "Gotoh 510 series 1:15, open-gear"]
          lacquer:
-             - [Neck & Body, "Open-pored Matt"]
+             - [Neck & Body, "Open-pored matt"]
              - [Top, "Glossy"]
      text:
-         "The Orchestra Model is a slightly smaller guitar famous for its comfortable playability. The combination of the distinctively arched top and a light-weight construction results in a dynamic tone with remarkable volume.
+         "The Orchestra Model is a slightly smaller guitar famous for its comfortable playability. The combination of the distinctive arched top and a light-weight construction results in a dynamic tone with remarkable volume.
 
 
-          A carbon fiber reinforced neck guarantees tuning with high tonal sustainability. The open-pored matt lacquer on neck and body supports the natural feel of the materials.
-          The Orchestral Model shines throughout its simple aesthetics with the diverse voice of a hand-crafted instrument."
+          With the help of carbon fiber rods inside the neck, excellent tuning stability can be achieved. The open-pored matt lacquer on neck and body supports the natural feel of the materials.
+          The Orchestral Model shines throughout its simple aesthetics with the diverse voice of an hand-crafted instrument."

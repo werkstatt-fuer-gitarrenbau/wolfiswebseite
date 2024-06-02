@@ -3,8 +3,8 @@ price: 3950,-
 de:
     properties:
         wood_and_other:
-            - [Decke, "Zeder, massiv"]
-            - [Korpus, "Mahagoni, massiv"]
+            - [Decke, "Zeder"]
+            - [Korpus, "Mahagoni"]
             - [Form, "Orchestra Model"]
             - [Hals, "Cedro"]
             - [Griffbrett, "Ebenholz, 22 Bünde"]
@@ -32,24 +32,24 @@ en:
      properties:
          wood_and_other:
              - [Top, "Canadian Cedar"]
-             - [Body, "Mahagoni"]
+             - [Body, "Mahogany"]
              - [Form, "Orchestra Model"]
              - [Neck, "Cedro"]
-             - [Fingerboard, "Ebony, 22 Frets"]
+             - [Fingerboard, "Ebony, 22 frets"]
              - [Inlays, "Dots, Mother of Pearl"]
              - ["Bridge", "Wenge"]
              - ["Pins", "Ebony with MOP Inlays"]
-             - [Bindings, "Mahagoni"]
+             - [Bindings, "Mahogany"]
              - ["Saddle", "Bone"]
              - [Truss rod, "Two-Way"]
-             - [Base of the Neck, "14<sup>th</sup> Fret"]
-             - [Machine Heads, "Gotoh 510 Series 1:15, Open-gear"]
+             - [Base of the Neck, "14<sup>th</sup> fret"]
+             - [Machine Heads, "Gotoh 510 Series 1:15, open-gear"]
          lacquer:
-             - [Neck & Body, "Open-pored Matt"]
+             - [Neck & Body, "Open-pored matt"]
              - [Top, "Glossy"]
      text:
-         "The Orchestra Model is a slightly smaller guitar famous for its comfortable playability. The combination of the distinctively arched top and a light-weight construction results in a dynamic tone with remarkable volume.
+         "The Orchestra Model is a slightly smaller guitar famous for its comfortable playability. The combination of the distinctive arched top and a light-weight construction results in a dynamic tone with remarkable volume.
 
 
-          A carbon fiber reinforced neck guarantees tuning with high tonal sustainability. The open-pored matt lacquer on neck and body supports the natural feel of the materials.
-          The Orchestral Model shines throughout its simple aesthetics with the diverse voice of a hand-crafted instrument."
+          With the help of carbon fiber rods inside the neck, excellent tuning stability can be achieved. The open-pored matt lacquer on the neck and body supports the natural feel of the materials.
+          The Orchestral Model shines throughout its simple aesthetics with the diverse voice of an hand-crafted instrument."
