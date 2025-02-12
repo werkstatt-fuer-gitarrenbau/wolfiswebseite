@@ -146,7 +146,7 @@ class FTPClient(object):
     More advanced FTP client than ftplib
     """
     def __init__(self, host, user, password):
-        self._ftp = ftplib.FTP(host, user, password)
+        self._ftp = ftplib.FTP_TLS(host, user, password)
         self._dirtree = DirTree(self._ls)
 
     def _ls(self, path=None):
