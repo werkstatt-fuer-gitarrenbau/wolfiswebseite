@@ -6,7 +6,7 @@ import tornado.web
 import scss
 import yaml
 import glob
-import StringIO
+import io
 from PIL import Image
 import markdown2
 
@@ -56,7 +56,7 @@ WORDS = {
         }
 
 
-def aspect((x, y)):
+def aspect(x, y):
     return 'portrait' if x < y else 'landscape'
 
 def format_text(text):
@@ -97,7 +97,7 @@ def load_guitar_info(folder):
                              if info[0] != moodimages[0]]
         else:
             res['moodimage'] = res['images'][0][0]
-        res['images'] = [(path, size, aspect(size) != aspect(size2))
+        res['images'] = [(path, size, aspect(*size) != aspect(*size2))
                          for (path, size), (_, size2)
                          in zip(res['images'],
                                 res['images'][1:] + res['images'][-1:])]
@@ -107,7 +107,7 @@ def load_guitar_info(folder):
 
 def load_image_names(folder):
     images = sorted(glob.glob(os.path.join(folder, '*.jpg')))
-    print images
+    print(images)
     return [os.path.split(image)[1][:-4] for image in images]
 
 class BaseHandler(tornado.web.RequestHandler):
@@ -186,7 +186,7 @@ class ImageHandler(tornado.web.RequestHandler):
         else:
             size = int(size)
             def resize(filename):
-                sio = StringIO.StringIO()
+                sio = io.StringIO()
                 img = Image.open(filename)
                 img.thumbnail((size, size), Image.ANTIALIAS)
                 img.save(sio, "JPEG")
@@ -254,5 +254,5 @@ class Application(tornado.web.Application):
 if __name__ == "__main__":
     application = Application()
     application.listen(8888)
-    print "started server on http://localhost:8888"
+    print("started server on http://localhost:8888")
     tornado.ioloop.IOLoop.instance().start()

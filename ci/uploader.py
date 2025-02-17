@@ -56,7 +56,7 @@ class DirTree(object):
         if not self.is_resolved:
             return
         if len(path) == 0:
-            print "INVALIDATED", '/'.join(path)
+            print("INVALIDATED", '/'.join(path))
             self._files = None
             self._folders = None
         else:
@@ -153,7 +153,7 @@ class FTPClient(object):
     def _ls(self, path=None):
         if path is None:
             path = []
-        print "LS", path
+        print("LS", path)
         lines = []
         self._ftp.retrlines('LIST %s'%render_path(path), lines.append)
         files = []
@@ -188,7 +188,7 @@ class FTPClient(object):
             res = self._dirtree.lookup(path)
         except KeyError:
             self.mkdir(path[:-1])
-            print "MKDIR", render_path(path)
+            print("MKDIR", render_path(path))
             self._ftp.mkd('/'.join(path))
             self._dirtree.invalidate(path[:-1])
             return
@@ -196,12 +196,12 @@ class FTPClient(object):
             raise ValueError('exists as file')
 
     def delete(self, path):
-        print "DELETE", render_path(path)
+        print("DELETE", render_path(path))
         self._ftp.delete('/'.join(path))
 
     def send_tree(self, path, source_path, tree_to_send, delete_other=False):
         delete_tree = self._dirtree.lookup(path)-tree_to_send
-        print delete_tree
+        print(delete_tree)
         for root, folders, files in tree_to_send.walk():
             for filename in files:
                 source = [source_path] + root + [filename]
@@ -211,8 +211,8 @@ class FTPClient(object):
                     self._dirtree.lookup(target_dir)
                 except KeyError:
                     self.mkdir(target_dir)
-                print "SEND", '/'.join(source), "->",
-                print '/'.join(path + root)
+                print("SEND", '/'.join(source), "->")
+                print('/'.join(path + root))
                 with open(os.sep.join(source)) as file_to_send:
                     self._ftp.storbinary("STOR %s"%render_path(target),
                                          file_to_send)
@@ -230,7 +230,7 @@ def _main():
     #print ftpclient.ls(['wwwroot'])
     #ftpclient.deepls()
     wwwroot = ftpclient.get(['wwwroot'])
-    print wwwroot
+    print(wwwroot)
     localdir = local_dirtree('../htdocs')
     ftpclient.send_tree(['wwwroot'], '../htdocs', localdir, True)
 
