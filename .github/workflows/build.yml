@@ -8,6 +8,8 @@ jobs:
     - uses: actions/setup-python@v5
       with:
         python-version: '3.8'
+    - name: Install cairo
+      run: sudo apt-get install libcairo2-dev libjpeg-dev libgif-dev
     - name: Generate & Upload
       run: |
         python -m pip install --upgrade --force-reinstall -r requirements.txt
