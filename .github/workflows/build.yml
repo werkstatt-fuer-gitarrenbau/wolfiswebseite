@@ -15,4 +15,5 @@ jobs:
         python -m pip install --upgrade --force-reinstall -r requirements.txt
         cd ci
         ./generate_static_htdocs
-        python uploader.py
+        ls ../htdocs
+        # lftp -c "open -u $FTP_USER,$FTP_PASSWORD $FTP_SERVER; mirror -R ../htdocs wwwroot/"
