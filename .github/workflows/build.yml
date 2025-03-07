@@ -15,4 +15,4 @@ jobs:
         cd ci
         ./generate_static_htdocs
         ls ../htdocs
-        # lftp -c "open -u $FTP_USER,$FTP_PASSWORD $FTP_SERVER; mirror -R ../htdocs wwwroot/"
+        lftp -c "open -u $FTP_USER,$FTP_PASSWORD $FTP_SERVER; mirror -R ../htdocs wwwroot/"
