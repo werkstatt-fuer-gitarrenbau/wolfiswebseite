@@ -65,7 +65,7 @@ def format_text(text):
 def load_guitar_info(folder):
     with open(os.path.join(folder, 'gitarren.yaml'),
               'r') as guitars_file:
-        guitars = yaml.load(guitars_file)
+        guitars = yaml.safe_load(guitars_file)
     def load_single_guitar_info(kind, guitar):
         guitars_folder = os.path.join(folder, kind)
         guitar_folder = os.path.join(guitars_folder, guitar)
@@ -73,7 +73,7 @@ def load_guitar_info(folder):
         try:
             with open(os.path.join(guitar_folder,
                                    '%s.yaml' % guitar)) as guitar_info:
-                res = yaml.load(guitar_info)
+                res = yaml.safe_load(guitar_info)
                 if not 'text' in res:
                     res['text'] = ""
         except IOError:
