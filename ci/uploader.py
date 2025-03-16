@@ -5,7 +5,6 @@ uploads website to ftp server
 import os
 import ftplib
 import ssl
-import yaml
 
 
 def render_path(pathlist):
@@ -225,7 +224,8 @@ class FTPClient(object):
 
 def _main():
     BASEDIR = os.path.abspath(os.path.dirname(__file__))
-    logindata = yaml.load(open(os.path.join(BASEDIR, 'login.yaml'), 'r').read(), Loader=yaml.Loader)
+    import yaml
+    logindata = yaml.load(open(os.path.join(BASEDIR, 'login.yaml')))
     ftpclient = FTPClient(**logindata)
     #print ftpclient.ls(['wwwroot'])
     #ftpclient.deepls()
