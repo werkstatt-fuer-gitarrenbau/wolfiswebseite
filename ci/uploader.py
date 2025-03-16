@@ -4,7 +4,6 @@ uploads website to ftp server
 
 import os
 import ftplib
-import ssl
 
 
 def render_path(pathlist):
@@ -148,7 +147,6 @@ class FTPClient(object):
     """
     def __init__(self, host, user, password):
         self._ftp = ftplib.FTP_TLS(host, user, password)
-        self._ftp.ssl_version = ssl.PROTOCOL_TLS
         self._dirtree = DirTree(self._ls)
 
     def _ls(self, path=None):
