@@ -21,6 +21,8 @@ de:
       lacquer:
           - [Hals, "Hartwachsöl"]
           - [Korpus, "Schellack"]
+      accessories:
+          - [Koffer, "Hartschale"]
 
   text: <br />
        <br />
