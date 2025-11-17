@@ -46,13 +46,13 @@
 </div>
 <div class="imagefloater guitar_detail_image">
 {% for image, size, _ in guitar['images'][:1] %}
-<a class="fancybox" rel="guitars" href="{{ image }}.800.jpg">
+<a class="fancybox" rel="guitars" href="{{ image }}.2000.jpg">
     <img class="first" src="{{ image }}.300.jpg">
 </a>
 {% end %}
 <div class="secondary_images">
 {% for image, size, aspect_change in guitar['images'][1:] %}
-<a class="fancybox" rel="guitars" href="{{ image }}.800.jpg">
+<a class="fancybox" rel="guitars" href="{{ image }}.2000.jpg">
     <img src="{{ image }}.100.jpg">
 </a>
 {% if aspect_change %}
