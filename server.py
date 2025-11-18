@@ -31,7 +31,9 @@ GITARREN_EIGENSCHAFTEN = {
              ('system', 'System'),
              ('lacquer', 'Lack'),
              ('condition', 'Zustand'),
-             ('price', 'Preis')],
+             ('price', 'Preis'),
+             ('accessories', 'Zubehör')
+             ],
         "en":
             [('wood', 'Wood'),
              ('wood_and_other', 'Woods & Materials'),
@@ -39,7 +41,8 @@ GITARREN_EIGENSCHAFTEN = {
              ('system', 'System'),
              ('lacquer', 'Lacquer'),
              ('condition', 'Condition'),
-             ('price', 'Price')],
+             ('price', 'Price'),
+             ('accessories', 'Accessories')],
         }
 
 WORDS = {
