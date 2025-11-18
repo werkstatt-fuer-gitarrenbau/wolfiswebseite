@@ -15,10 +15,11 @@ de:
           - [Halsstab, "Zwei-Wege"]
           - [Halsansatz, "14. Bund"]
           - [Mechaniken, "Gotoh SGV510Z Serie 1:21 chrom"]
-          - [Koffer, "Hiscox Pro II GAD"]
       lacquer:
           - [Hals, "Hartwachsöl"]
           - [Korpus, "Schellack"]
+      accesories:
+          - [Koffer, "Hiscox Pro II GAD"]
 
   text: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dStb9HYFegM\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>
        <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/DDob6inigJo\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>
@@ -53,10 +54,11 @@ en:
           - [Truss rod, "Two-Way"]
           - [Base of the Neck, "14<sup>th</sup> fret"]
           - [Machine Heads, "Gotoh SGV510Z series 1:21, chrome"]
-          - [Case, "Hiscox Pro II GAD"]
       lacquer:
           - [Neck, "Hard Wax Oil"]
           - [Body, "Shellac"]
+      accesories:
+          - [Case, "Hiscox Pro II GAD"]
   text:
       "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dStb9HYFegM\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>
        <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/DDob6inigJo\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>

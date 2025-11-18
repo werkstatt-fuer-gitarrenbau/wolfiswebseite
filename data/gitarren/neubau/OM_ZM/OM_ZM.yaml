@@ -19,6 +19,8 @@ de:
         lacquer:
             - ["Korpus & Hals", "offenporig Matt"]
             - [Decke, "Hochglanz"]
+        accesories:
+          - [Koffer, "Hiscox Pro II OM"]
 
     text: "Das Orchestra Model ist eine etwas kleinere Gitarre, die sich durch eine angenehme Bespielbarkeit auszeichnet.
             Durch eine ausgeprägte Deckenwölbung, die in Kombination mit einer leichten Bauweise steht, lässt sich ein dynamischer
@@ -47,6 +49,8 @@ en:
          lacquer:
              - [Neck & Body, "Open-pored matt"]
              - [Top, "Glossy"]
+         accesories:
+          - [Case, "Hiscox Pro II OM"]
      text:
          "The Orchestra Model is a slightly smaller guitar famous for its comfortable playability. The combination of the distinctive arched top and a light-weight construction results in a dynamic tone with remarkable volume.
 

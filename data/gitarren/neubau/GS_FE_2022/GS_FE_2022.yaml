@@ -1,6 +1,6 @@
 ﻿name: Grand Solo FE 2022
 de:
-  price: 5900,-
+  price: verkauft!  
   properties:
       wood_and_other:
           - [Decke, "schweizer Alpenfichte"]
@@ -16,10 +16,11 @@ de:
           - [Halsstab, "Zwei-Wege"]
           - [Halsansatz, "14. Bund"]
           - [Mechaniken, "Gotoh SGV510Z Serie 1:21 chrom"]
-          - [Koffer, "Hiscox Pro II GAD"]
       lacquer:
           - [Hals, "matt lackiert"]
           - [Korpus, "Schellack"]
+      accesories:
+          - [Koffer, "Hiscox Pro II GAD"]
 
   text: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/UDbFsmcd36o\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>
        <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/mz8gD6h-DSU\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>
@@ -40,7 +41,7 @@ de:
        Dieses Instrument ist voller Respekt gegenüber der Gitarrenbautradition, mit Blick auf die Zukunft entstanden."
 
 en:
-  price: 5900,-
+  price: sold!
   properties:
       wood_and_other:
           - [Top, "Swiss Spruce"]
@@ -56,10 +57,11 @@ en:
           - [Truss rod, "Two-Way"]
           - [Base of the Neck, "14<sup>th</sup> fret"]
           - [Machine Heads, "Gotoh SGV510Z series 1:21, chrome"]
-          - [Case, "Hiscox Pro II GAD"]
       lacquer:
           - [Neck, "Matt"]
           - [Body, "Shellac"]
+      accesories:
+          - [Case, "Hiscox Pro II GAD"]
   text:
       "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/UDbFsmcd36o\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>
        <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/mz8gD6h-DSU\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>
