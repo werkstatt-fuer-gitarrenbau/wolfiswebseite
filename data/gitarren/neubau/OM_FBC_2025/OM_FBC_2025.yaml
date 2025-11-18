@@ -1,5 +1,5 @@
 ﻿name: Orchestra Model FBC 2025  
-price: --
+price: 5300,- 
 de:
     properties:
         wood_and_other:
@@ -16,10 +16,11 @@ de:
             - [Halsstab, "Zwei-Wege"]
             - [Halsansatz, "14. Bund"]
             - [Mechaniken, "Gotoh 510 Serie 1:15 offen"]
-            - [Koffer, "Hiscox Pro II GAD"]
         lacquer:
             - ["Korpus & Hals", "Hartwachsöl"]
-            - [Decke, "Schellack"   ]
+            - [Decke, "Schellack"]
+    accesories:
+            - ["Koffer, Hiscox Pro II OM"]
 
     text: "Das Orchestra Model ist eine etwas kleinere Gitarre, die sich durch eine angenehme Bespielbarkeit auszeichnet.
             Durch eine ausgeprägte Deckenwölbung, die in Kombination mit einer leichten Bauweise steht, lässt sich ein dynamischer
@@ -34,24 +35,24 @@ en:
      properties:
          wood_and_other:
              - [Top, "Swiss Spruce"]
-             - [Body, "Indian Rosewood"]
+             - [Body, "Bosse Cedar"]
              - [Form, "Orchestra Model"]
-             - [Neck, "Cedro"]
-             - [Fingerboard, "Ebony, 22 Frets"]
+             - [Neck, "Mahogany"]
+             - [Fingerboard, "Indian Rosewood, 21 Frets"]
              - [Inlays, "Dots, Mother of Pearl"]
-             - ["Bridge", "Rosewood"]
+             - ["Bridge", "Indian Rosewood"]
              - ["Pins", "Rosewood with MOP Inlays"]
-             - [Bindings, "Ebony"]
+             - [Bindings, "Mahogany"]
              - ["Saddle", "Bone"]
              - [Truss rod, "Two-Way"]
              - [Base of the Neck, "14<sup>th</sup> fret"]
              - [Machine Heads, "Gotoh 510 Series 1:15, open-gear"]
          lacquer:
-             - [Neck & Body, "Open-pored matt"]
-             - [Top, "Glossy"]
+             - [Neck & Body, "Hard Wax Oil"]
+             - [Top, "Shellac"]
      text:
          "The Orchestra Model is a slightly smaller guitar famous for its comfortable playability. The combination of the distinctive arched top and a light-weight construction results in a dynamic tone with remarkable volume.
 
 
-          With the help of carbon fiber rods inside the neck, excellent tuning stability can be achieved. The open-pored matt lacquer on neck and body supports the natural feel of the materials.
+          With the help of carbon fiber rods inside the neck, excellent tuning stability can be achieved. The hard wax oil finish on the neck and body supports the natural feel of the materials.
           The Orchestral Model shines throughout its simple aesthetics with the diverse voice of an hand-crafted instrument."
